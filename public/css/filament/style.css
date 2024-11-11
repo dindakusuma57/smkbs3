@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-scroll {
+    background-color: rgba(255, 255, 255, 1); /* Sesuaikan warna dan transparansi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsi: Tambahkan bayangan */
+    transition: background-color 0.3s; /* Animasi transisi */
+  }
+
+  .text-dark {
+    color: black !important;
+  }
+
+  .half-green-card {
+    background: linear-gradient(to right, #C4DAD2 50%, transparent 50%);
+  }
+
+  .half-card {
+    background: linear-gradient(to left, #C4DAD2 50%, transparent 50%);
+  }
+
+
+  /* Animasi untuk efek visual */
+dd {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
