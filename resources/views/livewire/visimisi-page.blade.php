@@ -98,8 +98,6 @@
                 SMK Bina Sejahtera 3
             </p>
 
-
-
             <div class="w-full">
                 <div class="flex flex-col mb-10 w-3/4 ">
                     <div class="w-full mb-5 sm:mb-0  ">

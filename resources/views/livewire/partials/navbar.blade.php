@@ -23,6 +23,9 @@
               <li><a href="/kalender" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Kalender</a></li>
               <li><a href="/visimisi" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Visimisi</a></li>
               <li><a href="/kontak" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Contact</a></li>
+              <li><a href="/berita" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Berita</a></li>
+              <li><a href="/guru" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Guru</a></li>
+
             </ul>
           </div>
         </div>
