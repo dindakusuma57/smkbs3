@@ -34,43 +34,53 @@
 {{-- Service --}}
 <section class="bg-gray-100 py-8 px-4" data-aos="fade-up" data-aos-delay="100">
     <div class="container mx-auto text-center px-4">
-        <h2 class="text-2xl font-bold text-[#002500] mb-8">Kenapa SMK Bina Sejahtera 3?</h2>
+        <h1 class="text-4xl font-bold text-[#002500] mb-8">Kenapa SMK Bina Sejahtera 3?</h1>
         <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-white p-8 shadow-md rounded-md">
-                    <i class="fas fa-lock text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Secure</h3>
-                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-lock text-4xl text-[#6A9C89] mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#16423C] mb-2">Mendidik Dengan Hati</h3>
+                    <p class="text-gray-600">Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi guru yang disanjung tinggi.
+                        Mendidik dengan hati akan menyentuh aspek psikologis
+                        dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
+                    </p>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-white p-8 shadow-md rounded-md">
-                    <i class="fas fa-globe-americas text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Global</h3>
-                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-globe-americas text-4xl text-[#6A9C89] mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#16423C] mb-2">Guru Berkompeten</h3>
+                    <p class="text-gray-600">Guru merupakan faktor penting dalam proses belajar-mengajar.
+                        Itulah kenapa kami mendatangkan guru-guru
+                        berkompeten dibidangnya.
+                    </p>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-white p-8 shadow-md rounded-md">
-                    <i class="fas fa-users text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Collaborative</h3>
-                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-users text-4xl text-[#6A9C89] mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#16423C] mb-2">Proses Belajar Interaktif</h3>
+                    <p class="text-gray-600">Kami membuat proses belajar mengajar menjadi lebih interaktif.
+                        dengan demikian siswa lebih nyaman
+                        ketika belajar.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+
 {{-- ABOUT US SECTION --}}
 <section class="bg-gray-100 half-card">
     <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="About Us Image" class="transition-transform transform hover:scale-105 hover:shadow-lg object-cover rounded-lg shadow-md">
             </div>
             <div class="max-w-lg">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">About Us</h2>
-                <p class="mt-4 text-gray-600 text-lg" data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+                <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">About Us</h2>
+                <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
                     eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et magna quis elit efficitur consequat.
                     Mauris eleifend velit a pretium iaculis. Donec sagittis velit et magna euismod, vel aliquet nulla
                     malesuada. Nunc pharetra massa lectus, a fermentum arcu volutpat vel.</p>
@@ -306,43 +316,47 @@
 {{-- Latest News --}}
 <section class="py-8 px-4" >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h2 class="font-manrope text-4xl font-bold text-gray-900 text-center mb-16" data-aos="fade-up" data-aos-delay="100">Our latest  blog</h2>
+      <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" data-aos="fade-up" data-aos-delay="100">Berita Terbaru</h1>
+
       <div class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8" data-aos="fade-up" data-aos-delay="100">
-         <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+        {{-- Card --}}
+        <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
           <div class="flex items-center">
               <img src="https://pagedone.io/asset/uploads/1696244317.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
           </div>
           <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-              <span class="text-indigo-600 font-medium mb-3 block">Jan 01, 2023</span>
-              <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Clever ways to invest in product to organize your portfolio</h4>
+              <span class="text-[#16423C] font-medium mb-3 block">Jan 01, 2023</span>
+              <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">Clever ways to invest in product to organize your portfolio</h4>
               <p class="text-gray-500 leading-6 mb-10">Discover smart investment strategies to streamline and organize your portfolio..</p>
-              <a href="javascript:;" class="cursor-pointer text-lg text-indigo-600 font-semibold">Read more..</a>
+              <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read more..</a>
           </div>
          </div>
-         <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+
+         <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
           <div class="flex items-center">
               <img src="https://pagedone.io/asset/uploads/1696244340.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
           </div>
           <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-              <span class="text-indigo-600 font-medium mb-3 block">Feb 01, 2023</span>
-              <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">How to grow your profit through systematic investment with us</h4>
+              <span class="text-[#16423C] font-medium mb-3 block">Feb 01, 2023</span>
+              <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">How to grow your profit through systematic investment with us</h4>
               <p class="text-gray-500 leading-6 mb-10">Unlock the power of systematic investment with us and watch your profits soar. Our..</p>
-              <a href="javascript:;" class="cursor-pointer text-lg text-indigo-600 font-semibold">Read more..</a>
+              <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read more..</a>
           </div>
          </div>
-         <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+
+         <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
           <div class="flex items-center">
               <img src="https://pagedone.io/asset/uploads/1696244356.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
           </div>
           <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-              <span class="text-indigo-600 font-medium mb-3 block">Mar 01, 20233</span>
-              <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">How to analyze every holdings of your portfolio</h4>
+              <span class="text-[#16423C] font-medium mb-3 block">Mar 01, 20233</span>
+              <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">How to analyze every holdings of your portfolio</h4>
               <p class="text-gray-500 leading-6 mb-10">Our comprehensive guide will equip you with the tools and insights needed to..</p>
-              <a href="javascript:;" class="cursor-pointer text-lg text-indigo-600 font-semibold">Read more..</a>
+              <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read more..</a>
           </div>
          </div>
       </div>
-      <a href="javascript:;" class="mt-4 cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-gray-900 font-semibold mx-auto transition-all duration-300 hover:bg-gray-100">View All</a>
+      <a href="javascript:;" class="mt-8 cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-[#16423C] font-semibold mx-auto transition-all duration-300 hover:bg-gray-100">View All</a>
     </div>
 </section>
 {{-- End Latest News --}}
@@ -353,8 +367,11 @@
         <div class="flex justify-between items-center flex-col lg:flex-row md:mt-20">
             <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
                 <h2
-                    class="font-manrope text-5xl text-gray-900 font-bold leading-[4rem] mb-7 text-center lg:text-left">
-                    Tenaga Pendidik SMK Bina Sejahtera 3</h2>
+                    class="font-manrope text-5xl text-[#16423C] font-bold leading-[4rem] text-center lg:text-left">
+                    Tenaga Pendidik</h2>
+                <h2
+                    class="font-manrope text-5xl text-[#16423C] font-bold leading-[4rem] mb-7 text-center lg:text-left">
+                    SMK Bina Sejahtera 3</h2>
                 <p class="text-lg text-gray-500 mb-16 text-center lg:text-left">These people work on making our
                     product best.</p>
                 <button class="cursor-pointer py-3 px-8 w-60 bg-[#6A9C89] text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
