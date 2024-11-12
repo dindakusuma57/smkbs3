@@ -18,9 +18,9 @@
           </div>
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
             <ul class="flex flex-col font-medium md:flex-row md:space-x-8 rtl:space-x-reverse" id="navbar-links">
-              <li><a href="#" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Home</a></li>
-              <li><a href="#" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">About</a></li>
-              <li><a href="#" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Services</a></li>
+              <li><a href="/" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Home</a></li>
+              <li><a href="/sejarah" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Sejarah</a></li>
+              <li><a href="/kalender" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Kalender</a></li>
               <li><a href="#" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Contact</a></li>
             </ul>
           </div>
