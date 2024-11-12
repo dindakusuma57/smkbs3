@@ -25,6 +25,7 @@
               <li><a href="/kontak" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Contact</a></li>
               <li><a href="/berita" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Berita</a></li>
               <li><a href="/guru" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Guru</a></li>
+              <li><a href="/kurikulum" class="text-gray-900 md:hover:text-blue-700 dark:text-white dark:hover:text-blue-500">Kurikulum</a></li>
 
             </ul>
           </div>

@@ -28,7 +28,9 @@
         <p class="text-gray-700 mb-2 md:mb-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....</p>
         <div class="flex justify-between mb-2">
           <span class="font-thin text-sm">May 20th 2020</span>
+          <a href="/detailberita">
           <span class="sm:block hidden mb-2 text-gray-800 font-bold">Read more</span>
+          </a>
         </div>
       </div>
     </div>
