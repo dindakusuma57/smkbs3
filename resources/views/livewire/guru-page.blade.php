@@ -11,6 +11,7 @@
         </div>
     </section>
 
+    {{-- Kepsek --}}
     <section class="bg-gray-100">
       <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
