@@ -41,7 +41,6 @@ class TestimoniResource extends Resource
                                 ->maxLength(255),
 
                             TextInput::make('keterangan')
-                                ->required()
                                 ->maxLength(255),
 
                             MarkdownEditor::make('deskripsi')

@@ -11,7 +11,8 @@ use App\Livewire\GuruPage;
 use App\Livewire\DetailBeritaPage;
 use App\Livewire\EkskulPage;
 use App\Livewire\KurikulumPage;
-use App\Livewire\EkskulPagePage;
+use App\Livewire\PpdbPage;
+use App\Livewire\GaleriPage;
 
 
 Route::get('/', HomePage::class);
@@ -24,4 +25,6 @@ Route::get('/guru', GuruPage::class);
 Route::get('/detailberita', DetailBeritaPage::class);
 Route::get('/kurikulum', KurikulumPage::class);
 Route::get('/ekstrakulikuler', EkskulPage::class);
+Route::get('/ppdb', PpdbPage::class);
+Route::get('/galeri', GaleriPage::class);
 

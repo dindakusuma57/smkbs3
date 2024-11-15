@@ -8,6 +8,22 @@
     transition: background-color 0.3s; /* Animasi transisi */
   }
 
+  /* Menghapus background dan border */
+.navbar {
+    background: none; /* Menghilangkan background */
+    border: none; /* Menghilangkan border */
+    padding: 0; /* Menghilangkan padding */
+  }
+
+  /* Mengatur padding atau margin di dalam navbar jika ada */
+  .navbar-nav .nav-item,
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    padding: 0; /* Menghilangkan padding di elemen navbar */
+    margin: 0; /* Menghilangkan margin */
+  }
+
+
   .text-dark {
     color: black !important;
   }

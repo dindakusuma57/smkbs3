@@ -12,24 +12,25 @@
 
 
 <div>
+
     <section class="bg-gradient-to-b from-[#116453] to-[#032830]">
         <div
             class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
                 data-aos="fade-in">
-                <h1 class="text-5xl font-bold leading-none sm:text-6xl text-white">Ac mattis
-                    <span class="text-white">senectus</span>erat pharetra
+                <h1 class="text-5xl font-bold leading-none sm:text-5xl text-white">Selamat Datang
                 </h1>
-                <p class="mt-6 mb-8 text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
-                    <br class="hidden md:inline lg:hidden">turpis pulvinar, est scelerisque ligula sem
+                <h1 class="mt-4 text-5xl font-bold leading-none sm:text-4xl text-white">di SMK Bina Sejahtera 3
+                </h1>
+                <p class="mt-8 mb-8 text-lg sm:mb-12 text-white">Sekolah Impian bersama, kami wujudkan pendidikan yang komprehensif untuk menciptakan generasi berprestasi, berakhlakul mulia dan siap menyongsong masa depan
                 </p>
                 <div
                     class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                     <a rel="noopener noreferrer" href="#"
-                        class="px-8 py-3 text-lg font-semibold rounded bg-white dark:text-black">Suspendisse</a>
+                        class="px-8 py-3 text-lg font-semibold rounded-lg bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md">Info PPDB</a>
                 </div>
             </div>
-            <div class="flex items-center justify-center h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" data-aos="zoom-out"
+            <div class="flex items-center justify-center h-72 sm:h-90 lg:h-96 xl:h-112 2xl:h-128" data-aos="zoom-out"
                 data-aos-delay="100">
                 <img src="img/hero1.png" class="object-cover h-full w-full" alt="Hero Image" loading="lazy">
             </div>
@@ -41,64 +42,38 @@
         <div class="container mx-auto text-center px-4">
             <h1 class="text-4xl font-bold text-[#002500] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
             <div class="flex flex-wrap -mx-4 mt-4">
+                @foreach($choices as $choice)
                 <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
-                    <div
-                        class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
-                        <i class="fas fa-lock text-4xl text-[#6A9C89] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#16423C] mb-2">Mendidik Dengan Hati</h3>
-                        <p class="text-gray-600">Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi
-                            guru yang disanjung tinggi.
-                            Mendidik dengan hati akan menyentuh aspek psikologis
-                            dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
-                        </p>
+                    <div class="bg-white hover:bg-[#C4DAD2]  p-8 shadow-md rounded-lg flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                        <div class="flex justify-center mb-2">
+                            <img src="{{ $choice ? asset('storage/' . $choice->image) : '' }}" alt="Lock Icon" class="w-40 h-40 object-cover mb-2">
+                        </div>
+                        <h3 class="text-xl font-bold text-[#16423C] mb-2">{{ $choice->judul }}</h3>
+                        <p class="text-[#16423C]">{{ $choice->deskripsi }}</p>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 px-4 mb-8 " data-aos="fade-up" data-aos-delay="200">
-                    <div
-                        class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
-                        <i class="fas fa-globe-americas text-4xl text-[#6A9C89] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#16423C] mb-2">Guru Berkompeten</h3>
-                        <p class="text-gray-600 ">Guru merupakan faktor penting dalam proses belajar-mengajar.
-                            Itulah kenapa kami mendatangkan guru-guru
-                            berkompeten dibidangnya.
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="300">
-                    <div
-                        class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
-                        <i class="fas fa-users text-4xl text-[#6A9C89] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#16423C] mb-2">Proses Belajar Interaktif</h3>
-                        <p class="text-gray-600">Kami membuat proses belajar mengajar menjadi lebih interaktif.
-                            dengan demikian siswa lebih nyaman
-                            ketika belajar.
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
+
 
 
     {{-- ABOUT US SECTION --}}
     <section class="bg-gray-100 half-card">
         <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                @foreach($tentangs as $tentang)
                 <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="About Us Image"
-                        class="transition-transform transform hover:scale-105 hover:shadow-lg object-cover rounded-lg shadow-md">
+                    <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image"
+                        class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md object-cover rounded-lg ">
                 </div>
                 <div class="max-w-lg">
-                    <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">About Us</h2>
-                    <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Sed quis
-                        eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et magna quis elit efficitur
-                        consequat.
-                        Mauris eleifend velit a pretium iaculis. Donec sagittis velit et magna euismod, vel aliquet
-                        nulla
-                        malesuada. Nunc pharetra massa lectus, a fermentum arcu volutpat vel.</p>
+                    <h2 class="text-3xl font-semibold text-[#16423C] sm:text-2xl" data-aos="fade-up">Tentang</h2>
+                    <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">SMK Bina Sejathera 3</h2>
+                    <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">{{ $tentang->deskripsi }}</p>
                 </div>
-
+                @endforeach
             </div>
         </div>
     </section>
@@ -108,10 +83,7 @@
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
             <div class="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
-                {{-- <div class="max-w-5xl mx-auto text-center">
-            <h2 class="pb-1 text-4xl font-extrabold text-white">TailwindFlex Component Collection</h2>
-            <p class="mt-3 text-lg text-white">Discover the latest additions to our stunning Tailwind CSS UI collection!</p>
-        </div> --}}
+
                 <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-4 sm:gap-8" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="flex flex-col">
@@ -140,7 +112,6 @@
     </section>
 
     <script>
-        // Initialize PureCounter
         new PureCounter();
     </script>
 
@@ -149,8 +120,7 @@
         <div
             class="half-green-card mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-                <div class="max-w-xl text-left ltr:sm:text-left rtl:sm:text-right" data-aos="fade-up"
-                    data-aos-delay="100">
+                <div class="max-w-xl text-left ltr:sm:text-left rtl:sm:text-right" data-aos="fade-up">
                     <h2 class="text-2xl font-bold tracking-tight text-[#6A9C89] sm:text-2xl">
                         TESTIMONI
                     </h2>
@@ -176,77 +146,31 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="-mx-6 lg:col-span-2 lg:mx-0">
-
-                    {{-- Card 1 --}}
+                    {{-- Card --}}
                     <div id="keen-slider" class="keen-slider" data-aos="fade-left" data-aos-delay="100">
-                        <div class="keen-slider__slide">
-                            <blockquote
-                                class="rounded-xl flex h-full flex-col justify-between bg-[#0FA3B1] p-6 shadow-sm sm:p-8 lg:p-12">
-                                <div>
-                                    <div class="mt-4">
-                                        <p class="mt-4 leading-relaxed text-white">
-                                            No, Rose, they are not breathing. And they have no arms or legs … Where are
-                                            they? You know what? If we come across somebody with no arms or legs, do we
-                                            bother resuscitating them? I mean, what quality of life do we have there?
-                                        </p>
+                        @foreach($testimonis as $testimoni)
+                            @php
+                                $backgroundClass = ['bg-[#0FA3B1]', 'bg-[#FF5733]', 'bg-[#4CAF50]'][$loop->index % 3];
+                            @endphp
+
+                            <div class="keen-slider__slide">
+                                <blockquote class="rounded-xl flex h-full flex-col justify-between {{ $backgroundClass }} p-6 shadow-sm sm:p-8 lg:p-12">
+                                    <div>
+                                        <div class="mt-4">
+                                            <p class="mt-4 leading-relaxed text-white">
+                                                {{ $testimoni->deskripsi }}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <footer class="mt-4 text-sm font-medium text-white sm:mt-6 flex items-center">
-                                    <!-- Circle Image -->
-                                    <img src="img/logo.png" alt="Michael Scott" class="w-8 h-8 rounded-full mr-2">
-                                    &mdash; Michael Scott
-                                </footer>
-                            </blockquote>
-                        </div>
-
-                        {{-- Card 1 --}}
-                        <div class="keen-slider__slide">
-                            <blockquote
-                                class="rounded-xl flex h-full flex-col justify-between bg-[#FC7753] p-6 shadow-sm sm:p-8 lg:p-12">
-                                <div>
-                                    <div class="mt-4">
-                                        <p class="mt-4 leading-relaxed text-white">
-                                            No, Rose, they are not breathing. And they have no arms or legs … Where are
-                                            they? You know what? If we come across somebody with no arms or legs, do we
-                                            bother resuscitating them? I mean, what quality of life do we have there?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <footer class="mt-4 text-sm font-medium text-white sm:mt-6 flex items-center">
-                                    <!-- Circle Image -->
-                                    <img src="img/logo.png" alt="Michael Scott" class="w-8 h-8 rounded-full mr-2">
-                                    &mdash; Michael Scott
-                                </footer>
-                            </blockquote>
-                        </div>
-
-                        {{-- Card 2 --}}
-                        <div class="keen-slider__slide">
-                            <blockquote
-                                class="rounded-xl flex h-full flex-col justify-between bg-[#16423C] p-6 shadow-sm sm:p-8 lg:p-12">
-                                <div>
-                                    <div class="mt-4">
-
-                                        <p class="mt-4 leading-relaxed text-white">
-                                            No, Rose, they are not breathing. And they have no arms or legs … Where are
-                                            they? You know what? If we come across somebody with no arms or legs, do we
-                                            bother resuscitating them? I mean, what quality of life do we have there?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <footer class="mt-4 text-sm font-medium text-white sm:mt-6 flex items-center">
-                                    <!-- Circle Image -->
-                                    <img src="img/logo.png" alt="Michael Scott" class="w-8 h-8 rounded-full mr-2">
-                                    &mdash; Michael Scott
-                                </footer>
-                            </blockquote>
-                        </div>
-
+                                    <footer class="mt-4 text-sm font-medium text-white sm:mt-6 flex items-center">
+                                        <img src="{{ $testimoni ? asset('storage/' . $testimoni->image) : '' }}" alt="Michael Scott" class="w-10 h-10 rounded-full mr-2">
+                                        {{ $testimoni->nama }}
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -312,11 +236,10 @@
     {{-- Latest News --}}
     <section class="py-8 px-4">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" data-aos="fade-up"
-                data-aos-delay="100">Berita Terbaru</h1>
+            <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" data-aos="fade-up">Berita Terbaru</h1>
 
             <div class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8"
-                data-aos="fade-up" data-aos-delay="100">
+                data-aos="fade-up">
                 {{-- Card --}}
                 <div
                     class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
@@ -328,48 +251,14 @@
                         <span class="text-[#16423C] font-medium mb-3 block">Jan 01, 2023</span>
                         <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">Clever ways to invest in product
                             to organize your portfolio</h4>
-                        <p class="text-gray-500 leading-6 mb-10">Discover smart investment strategies to streamline and
+                        <p class="text-[#16423C] leading-6 mb-10">Discover smart investment strategies to streamline and
                             organize your portfolio..</p>
                         <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read
                             more..</a>
                     </div>
                 </div>
-
-                <div
-                    class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                    <div class="flex items-center">
-                        <img src="https://pagedone.io/asset/uploads/1696244340.png" alt="blogs tailwind section"
-                            class="rounded-t-2xl w-full object-cover">
-                    </div>
-                    <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                        <span class="text-[#16423C] font-medium mb-3 block">Feb 01, 2023</span>
-                        <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">How to grow your profit through
-                            systematic investment with us</h4>
-                        <p class="text-gray-500 leading-6 mb-10">Unlock the power of systematic investment with us and
-                            watch your profits soar. Our..</p>
-                        <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read
-                            more..</a>
-                    </div>
-                </div>
-
-                <div
-                    class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                    <div class="flex items-center">
-                        <img src="https://pagedone.io/asset/uploads/1696244356.png" alt="blogs tailwind section"
-                            class="rounded-t-2xl w-full object-cover">
-                    </div>
-                    <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                        <span class="text-[#16423C] font-medium mb-3 block">Mar 01, 20233</span>
-                        <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">How to analyze every holdings of
-                            your portfolio</h4>
-                        <p class="text-gray-500 leading-6 mb-10">Our comprehensive guide will equip you with the tools
-                            and insights needed to..</p>
-                        <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read
-                            more..</a>
-                    </div>
-                </div>
             </div>
-            <a href="javascript:;"
+            <a href="/berita"
                 class="mt-8 cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-[#16423C] font-semibold mx-auto transition-all duration-300 hover:bg-gray-100">View
                 All</a>
         </div>
@@ -380,14 +269,12 @@
     <section class="py-4 px-4 bg-gray-50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center flex-col lg:flex-row md:mt-20">
-                <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="5">
                     <h2 class="font-manrope text-5xl text-[#16423C] font-bold leading-[4rem] text-center lg:text-left">
                         Tenaga Pendidik</h2>
                     <h2
                         class="font-manrope text-5xl text-[#16423C] font-bold leading-[4rem] mb-7 text-center lg:text-left">
                         SMK Bina Sejahtera 3</h2>
-                    <p class="text-lg text-gray-500 mb-16 text-center lg:text-left">These people work on making our
-                        product best.</p>
                     <button
                         class="cursor-pointer py-3 px-8 w-60 bg-[#6A9C89] text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
                         Lihat Semua Guru
@@ -397,17 +284,17 @@
                     data-aos-delay="100">
                     <div class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">
                         <img src="https://pagedone.io/asset/uploads/1696238644.png" alt="Team tailwind section"
-                            class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0" />
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0" />
                         <img src="https://pagedone.io/asset/uploads/1696238665.png" alt="Team tailwind section"
-                            class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto" />
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto" />
                         <img src="https://pagedone.io/asset/uploads/1696238684.png" alt="Team tailwind section"
-                            class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0" />
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0" />
                         <img src="https://pagedone.io/asset/uploads/1696238702.png" alt="Team tailwind section"
-                            class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 md:ml-auto" />
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 md:ml-auto" />
                         <img src="https://pagedone.io/asset/uploads/1696238720.png" alt="Team tailwind section"
-                            class="w-44 h-56 rounded-2xl object-cover md:-mt-20 mx-auto min-[450px]:mr-0 md:mx-auto" />
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl object-cover md:-mt-20 mx-auto min-[450px]:mr-0 md:mx-auto" />
                         <img src="https://pagedone.io/asset/uploads/1696238737.png" alt="Team tailwind section"
-                            class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0" />
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0" />
 
                     </div>
                 </div>

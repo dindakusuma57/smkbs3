@@ -37,10 +37,10 @@ class TentangResource extends Resource
                     Grid::make()
                         ->schema([
                             TextInput::make('judul')
-                                ->required()
                                 ->maxLength(255),
 
                             MarkdownEditor::make('deskripsi')
+                                ->required()
                                 ->columnSpanFull()
                                 ->fileAttachmentsDirectory('tentang'),
 
