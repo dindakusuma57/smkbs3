@@ -18,8 +18,6 @@ class HomePage extends Component
         $this->choices = Choice::all();
         $this->tentangs = Tentang::all();
         $this->testimonis = Testimoni::all();
-
-
     }
 
     public function render()

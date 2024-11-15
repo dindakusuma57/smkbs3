@@ -13,6 +13,7 @@
 
 <div>
 
+    {{-- HERO START --}}
     <section class="bg-gradient-to-b from-[#116453] to-[#032830]">
         <div
             class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
@@ -36,15 +37,16 @@
             </div>
         </div>
     </section>
+    {{-- HERO END --}}
 
-    {{-- Service --}}
+    {{-- SERVICE START --}}
     <section class="bg-gray-100 py-8 px-4" data-aos="fade-up" data-aos-delay="100">
         <div class="container mx-auto text-center px-4">
             <h1 class="text-4xl font-bold text-[#002500] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
             <div class="flex flex-wrap -mx-4 mt-4">
                 @foreach($choices as $choice)
                 <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-white hover:bg-[#C4DAD2]  p-8 shadow-md rounded-lg flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <div class="bg-white [rgba(205,213,210,0.7)]  p-8 shadow-md rounded-lg flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
                         <div class="flex justify-center mb-2">
                             <img src="{{ $choice ? asset('storage/' . $choice->image) : '' }}" alt="Lock Icon" class="w-40 h-40 object-cover mb-2">
                         </div>
@@ -56,8 +58,7 @@
             </div>
         </div>
     </section>
-
-
+    {{-- SERVICE START --}}
 
     {{-- ABOUT US SECTION --}}
     <section class="bg-gray-100 half-card">
@@ -78,7 +79,7 @@
         </div>
     </section>
 
-    {{-- STATISTIK --}}
+    {{-- STATISTIK START --}}
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
@@ -114,8 +115,9 @@
     <script>
         new PureCounter();
     </script>
+    {{-- STATISTIK END --}}
 
-    {{-- TESTI --}}
+    {{-- TESTI START --}}
     <section class="bg-white mt-10">
         <div
             class="half-green-card mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
@@ -231,9 +233,9 @@
         keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
         keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
     </script>
+    {{-- TESTI END --}}
 
-
-    {{-- Latest News --}}
+    {{-- Latest News START --}}
     <section class="py-8 px-4">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" data-aos="fade-up">Berita Terbaru</h1>
@@ -301,5 +303,6 @@
             </div>
         </div>
     </section>
+    {{-- TEAM END --}}
 
 </div>
