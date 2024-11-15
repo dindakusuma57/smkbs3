@@ -3,26 +3,24 @@
 @tailwind utilities;
 
 .bg-scroll {
-    background-color: rgba(255, 255, 255, 1); /* Sesuaikan warna dan transparansi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsi: Tambahkan bayangan */
-    transition: background-color 0.3s; /* Animasi transisi */
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
   }
 
-  /* Menghapus background dan border */
 .navbar {
-    background: none; /* Menghilangkan background */
-    border: none; /* Menghilangkan border */
-    padding: 0; /* Menghilangkan padding */
+    background: none;
+    border: none;
+    padding: 0;
   }
 
-  /* Mengatur padding atau margin di dalam navbar jika ada */
   .navbar-nav .nav-item,
   .navbar-brand,
   .navbar-nav .nav-link {
-    padding: 0; /* Menghilangkan padding di elemen navbar */
-    margin: 0; /* Menghilangkan margin */
+    padding: 0;
+    margin: 0;
   }
-
 
   .text-dark {
     color: black !important;

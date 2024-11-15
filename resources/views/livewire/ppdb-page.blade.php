@@ -16,8 +16,11 @@
         <div class="max-w-6xl mt-8 mx-auto  mb-10 lg:mb-20">
             <div class="text-center">
             <h1 class=" text-3xl font-extrabold  text-[#16423C] sm:text-4xl" data-aos="fade-up">Penerimaan Peserta Didik Baru</h1>
+            <p class="font-bold sm:text-2xl text-[#16423C] mt-2  text-base leading-7 ">
+                SMK Bina Sejahtera 3
+            </p>
             <p class="font-medium sm:text-2xl text-[#16423C] mt-2  text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
-                SMK Bina Sejahtera 3 Tahun Ajaran 2025/2026
+                Tahun Ajaran 2025/2026
             </p>
             </div>
 

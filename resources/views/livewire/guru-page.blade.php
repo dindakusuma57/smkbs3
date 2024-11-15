@@ -40,38 +40,72 @@
   </section>
 
 <!-- Team -->
-    <section>
-        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-            <!-- Title -->
-            <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14" data-aos="fade-up">
-                <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Tenaga Pendidik</h1>
-                <p class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
-                    SMK Bina Sejahtera 3
-                </p>
-            </div>
-            <!-- End Title -->
-
-            <!-- Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-aos="zoom-in">
-                @foreach ($pengajars as $pengajar )
-            <div class="text-center mt-4">
-                <img class="rounded-xl sm:size-48 lg:size-60 mx-auto shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
-                src="{{ $pengajar ? asset('storage/' . $pengajar->image) : '' }}" alt="Avatar">
-                <div class="mt-2 sm:mt-4">
-                <h3 class="text-sm font-medium text-[#16423C] sm:text-base lg:text-lg ">
-                    {{ $pengajar -> nama }}
-                </h3>
-                <p class="text-xs text-[#16423C] sm:text-sm lg:text-base">
-                    {{ $pengajar -> keterangan }}
-                </p>
-                </div>
-            </div>
-            @endforeach
-            <!-- End Col -->
-            </div>
-            <!-- End Grid -->
+<section>
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <!-- Title -->
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14" data-aos="fade-up">
+            <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Guru - guru</h1>
+            <p class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
+                SMK Bina Sejahtera 3
+            </p>
         </div>
+        <!-- End Title -->
+
+        <!-- Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-aos="zoom-in">
+            @foreach ($pengajars as $pengajar)
+                <div class="text-center mt-4">
+                    <img class="rounded-xl sm:size-48 lg:size-60 mx-auto shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
+                        src="{{ $pengajar ? asset('storage/' . $pengajar->image) : asset('storage/default-avatar.jpg') }}" alt="Avatar">
+                    <div class="mt-2 sm:mt-4">
+                        <h3 class="text-sm font-medium text-[#16423C] sm:text-base lg:text-lg">
+                            {{ $pengajar->nama }}
+                        </h3>
+                        <p class="text-xs text-[#16423C] sm:text-sm lg:text-base">
+                            {{ $pengajar->keterangan }}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <!-- End Grid -->
+
+        <!-- Custom Pagination -->
+        <div class="mt-8 flex justify-center">
+            <ul class="inline-flex items-center space-x-1">
+                <!-- Previous Page Link -->
+                @if ($pengajars->onFirstPage())
+                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">&laquo; Previous</li>
+                @else
+                    <li>
+                        <a href="{{ $pengajars->previousPageUrl() }}" class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">&laquo; Previous</a>
+                    </li>
+                @endif
+
+                <!-- Pagination Links -->
+                @foreach ($pengajars->getUrlRange(1, $pengajars->lastPage()) as $page => $url)
+                    <li>
+                        <a href="{{ $url }}" class="{{ $page == $pengajars->currentPage() ? 'bg-[#16423C] text-white' : 'bg-[#6A9C89] text-white' }} px-3 py-1 rounded-md hover:bg-[#5e8b7d]">
+                            {{ $page }}
+                        </a>
+                    </li>
+                @endforeach
+
+                <!-- Next Page Link -->
+                @if ($pengajars->hasMorePages())
+                    <li>
+                        <a href="{{ $pengajars->nextPageUrl() }}" class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next &raquo;</a>
+                    </li>
+                @else
+                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Next &raquo;</li>
+                @endif
+            </ul>
+        </div>
+        <!-- End Custom Pagination -->
+    </div>
     <!-- End Team -->
-    </section>
+</section>
+
+
 
 </div>

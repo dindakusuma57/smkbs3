@@ -5,23 +5,27 @@ namespace App\Livewire;
 use App\Models\pengajar;
 use App\Models\kepsek;
 use Livewire\Component;
+use Livewire\Attributes\Title;
+use Livewire\WithPagination;
 
+#[Title('Guru - Yayasan Bina Sejahtera')]
 class GuruPage extends Component
 {
-    public $pengajars;
+    use WithPagination;
+
     public $kepseks;
 
     public function mount()
     {
-        $this->pengajars = Pengajar::all();
         $this->kepseks = Kepsek::all();
 
     }
 
     public function render()
     {
-        return view('livewire.guru-page');
-    }
+        $pengajars = Pengajar::paginate(8);
 
+        return view('livewire.guru-page', ['pengajars' => $pengajars]);
+    }
 
 }
