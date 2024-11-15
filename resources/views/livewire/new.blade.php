@@ -121,3 +121,48 @@
     keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
     keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
   </script>
+
+
+
+{{-- service --}}
+<section class="bg-gray-100 py-8 px-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="container mx-auto text-center px-4">
+        <h1 class="text-4xl font-bold text-[#002500] mb-8">Kenapa SMK Bina Sejahtera 3?</h1>
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-lock text-4xl text-[#6A9C89] mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#16423C] mb-2">Mendidik Dengan Hati</h3>
+                    <p class="text-gray-600">Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi
+                        guru yang disanjung tinggi.
+                        Mendidik dengan hati akan menyentuh aspek psikologis
+                        dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-globe-americas text-4xl text-[#6A9C89] mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#16423C] mb-2">Guru Berkompeten</h3>
+                    <p class="text-gray-600">Guru merupakan faktor penting dalam proses belajar-mengajar.
+                        Itulah kenapa kami mendatangkan guru-guru
+                        berkompeten dibidangnya.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-users text-4xl text-[#6A9C89] mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#16423C] mb-2">Proses Belajar Interaktif</h3>
+                    <p class="text-gray-600">Kami membuat proses belajar mengajar menjadi lebih interaktif.
+                        dengan demikian siswa lebih nyaman
+                        ketika belajar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -88,7 +88,17 @@
         </div>
       </div>
       <!-- End Col -->
-
+      <div class="text-center">
+        <img class="rounded-xl sm:size-48 lg:size-60 mx-auto shadow-md transition-transform transform hover:scale-105 hover:shadow-lg" src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="text-sm font-medium text-text-[#16423C] sm:text-base lg:text-lg">
+            Ebele Egbuna
+          </h3>
+          <p class="text-xs text-text-[#16423C] sm:text-sm lg:text-base dark:text-neutral-400">
+            Support Consultant
+          </p>
+        </div>
+      </div>
 
     </div>
     <!-- End Grid -->

@@ -39,8 +39,8 @@
     {{-- Service --}}
     <section class="bg-gray-100 py-8 px-4" data-aos="fade-up" data-aos-delay="100">
         <div class="container mx-auto text-center px-4">
-            <h1 class="text-4xl font-bold text-[#002500] mb-8">Kenapa SMK Bina Sejahtera 3?</h1>
-            <div class="flex flex-wrap -mx-4">
+            <h1 class="text-4xl font-bold text-[#002500] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
+            <div class="flex flex-wrap -mx-4 mt-4">
                 <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
                     <div
                         class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
@@ -53,12 +53,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-full md:w-1/3 px-4 mb-8 " data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="bg-white p-8 shadow-md rounded-md flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
                         <i class="fas fa-globe-americas text-4xl text-[#6A9C89] mb-4"></i>
                         <h3 class="text-xl font-bold text-[#16423C] mb-2">Guru Berkompeten</h3>
-                        <p class="text-gray-600">Guru merupakan faktor penting dalam proses belajar-mengajar.
+                        <p class="text-gray-600 ">Guru merupakan faktor penting dalam proses belajar-mengajar.
                             Itulah kenapa kami mendatangkan guru-guru
                             berkompeten dibidangnya.
                         </p>
