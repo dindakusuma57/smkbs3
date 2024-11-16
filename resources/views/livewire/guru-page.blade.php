@@ -69,11 +69,8 @@
             @endforeach
         </div>
         <!-- End Grid -->
-
-        <!-- Custom Pagination -->
         <div class="mt-8 flex justify-center">
             <ul class="inline-flex items-center space-x-1">
-                <!-- Previous Page Link -->
                 @if ($pengajars->onFirstPage())
                     <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">&laquo; Previous</li>
                 @else
@@ -82,7 +79,6 @@
                     </li>
                 @endif
 
-                <!-- Pagination Links -->
                 @foreach ($pengajars->getUrlRange(1, $pengajars->lastPage()) as $page => $url)
                     <li>
                         <a href="{{ $url }}" class="{{ $page == $pengajars->currentPage() ? 'bg-[#16423C] text-white' : 'bg-[#6A9C89] text-white' }} px-3 py-1 rounded-md hover:bg-[#5e8b7d]">
@@ -91,7 +87,6 @@
                     </li>
                 @endforeach
 
-                <!-- Next Page Link -->
                 @if ($pengajars->hasMorePages())
                     <li>
                         <a href="{{ $pengajars->nextPageUrl() }}" class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next &raquo;</a>
@@ -101,7 +96,7 @@
                 @endif
             </ul>
         </div>
-        <!-- End Custom Pagination -->
+
     </div>
     <!-- End Team -->
 </section>

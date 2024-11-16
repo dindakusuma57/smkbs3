@@ -20,10 +20,10 @@
         <section class="bg-gray-100">
             <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                    <div class="max-w-lg">
-                        <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Sejarah</h2>
-                    <p class="sm:text-2xl text-[#16423C] font-medium" data-aos="fade-up">SMK Bina Sejahtera 3</p>
                     @foreach($sejarahs as $sejarah)
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Sejarah</h2>
+                    <p class="mt-2 sm:text-2xl text-[#16423C] font-medium" data-aos="fade-up">SMK Bina Sejahtera 3</p>
                         <p class="mt-4 text-[#16423C] text-lg text-justify" data-aos="fade-up" data-aos-delay="200">{{ $sejarah->deskripsi }}</p>
                     </div>
                     <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="5">

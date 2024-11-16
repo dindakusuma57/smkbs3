@@ -80,29 +80,16 @@
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
-            <div class="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
-                <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-4 sm:gap-8" data-aos="fade-up"
+            <div class="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20 text-center">
+                <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8" data-aos="fade-up"
                     data-aos-delay="100">
+                    @foreach ($statistiks as $statistik)
                     <div class="flex flex-col">
-                        <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Components</dt>
-                        <dd class="order-1 text-5xl font-extrabold text-white purecounter" data-purecounter-start="0"
-                            data-purecounter-end="1600" data-purecounter-duration="1"></dd>
+                        <dt class="order-2 mt-2 text-2xl leading-6 font-medium text-white">{{ $statistik -> judul }}</dt>
+                        <dd class="order-1 text-7xl font-extrabold text-white purecounter" data-purecounter-start="0"
+                            data-purecounter-end="{{ $statistik -> deskripsi }}" data-purecounter-duration="1"></dd>
                     </div>
-                    <div class="flex flex-col mt-10 sm:mt-0">
-                        <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Free</dt>
-                        <dd class="order-1 text-5xl font-extrabold text-white purecounter" data-purecounter-start="0"
-                            data-purecounter-end="1600" data-purecounter-duration="1"></dd>
-                    </div>
-                    <div class="flex flex-col mt-10 sm:mt-0">
-                        <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Dark Mode</dt>
-                        <dd class="order-1 text-5xl font-extrabold text-white purecounter" data-purecounter-start="0"
-                            data-purecounter-end="1200" data-purecounter-duration="1"></dd>
-                    </div>
-                    <div class="flex flex-col mt-10 sm:mt-0">
-                        <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Categories</dt>
-                        <dd class="order-1 text-5xl font-extrabold text-white purecounter" data-purecounter-start="0"
-                            data-purecounter-end="90" data-purecounter-duration="1"></dd>
-                    </div>
+                    @endforeach
                 </dl>
             </div>
         </div>

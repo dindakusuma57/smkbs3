@@ -25,7 +25,7 @@
                     @foreach ($visis as $visi )
                     <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-6xl" data-aos="fade-up">Visi</h2>
                     <p class="sm:text-4xl text-[#16423C] font-medium mt-4" data-aos="fade-up">SMK Bina Sejahtera 3</p>
-                    <p class="mt-4 mx-2 text-[#16423C] text-lg border-l-4 border-[#6A9C89] pl-4" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-justify mt-4 mx-2 text-[#16423C] text-lg border-l-4 border-[#6A9C89] pl-4" data-aos="fade-up" data-aos-delay="200">
                       {{ $visi -> deskripsi }}
                     </p>
                   </div>
@@ -80,7 +80,7 @@
                         <div data-aos="fade-up-left" class="relative h-full ml-0 mr-0 sm:mr-10 hover:shadow-lg hover:scale-105 transition-transform duration-200">
                             <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-[#C4DAD2] rounded-lg"></span>
                             <div class="relative h-full p-5 bg-[#C4DAD2]  rounded-lg">
-                                <p class="mb-2 text-[#16423C] border-l-4 border-[#6A9C89] pl-4">{{$tujuan -> deskripsi}}
+                                <p class="text-justify mb-2 text-[#16423C] border-l-4 border-[#6A9C89] pl-4">{{$tujuan -> deskripsi}}
                                 </p>
                             </div>
                         </div>
