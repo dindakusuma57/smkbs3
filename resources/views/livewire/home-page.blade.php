@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/filament/style.css">
-<script src="js/filament/main.js"></script>
+<script type="module" src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
@@ -8,31 +8,27 @@
 <script>
     AOS.init();
 </script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
 
 <div>
-
     {{-- HERO START --}}
     <section class="bg-gradient-to-b from-[#116453] to-[#032830]">
-        <div
-            class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+        <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
                 data-aos="fade-in">
-                <h1 class="text-5xl font-bold leading-none sm:text-5xl text-white">Selamat Datang
-                </h1>
-                <h1 class="mt-4 text-5xl font-bold leading-none sm:text-4xl text-white">di SMK Bina Sejahtera 3
-                </h1>
-                <p class="mt-8 mb-8 text-lg sm:mb-12 text-white">Sekolah Impian bersama, kami wujudkan pendidikan yang komprehensif untuk menciptakan generasi berprestasi, berakhlakul mulia dan siap menyongsong masa depan
+                <h1 class="text-5xl font-bold leading-none sm:text-5xl text-white">Selamat Datang</h1>
+                <h1 class="mt-4 text-5xl font-bold leading-none sm:text-4xl text-white">di SMK Bina Sejahtera 3</h1>
+                <p class="mt-8 mb-8 text-lg sm:mb-12 text-white">
+                    Sekolah Impian bersama, kami wujudkan pendidikan yang komprehensif untuk menciptakan generasi
+                    berprestasi, berakhlakul mulia dan siap menyongsong masa depan
                 </p>
                 <div
                     class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                    <a rel="noopener noreferrer" href="#"
-                        class="px-8 py-3 text-lg font-semibold rounded-lg bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md">Info PPDB</a>
+                    <a href="#"
+                        class="px-8 py-3 text-lg font-semibold rounded-lg bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md">Info
+                        PPDB</a>
                 </div>
             </div>
-            <div class="flex items-center justify-center h-72 sm:h-90 lg:h-96 xl:h-112 2xl:h-128" data-aos="zoom-out"
-                data-aos-delay="100">
+            <div class="flex items-center justify-center h-72 sm:h-90 lg:h-96 xl:h-112 2xl:h-128">
                 <img src="img/hero1.png" class="object-cover h-full w-full" alt="Hero Image" loading="lazy">
             </div>
         </div>
@@ -44,36 +40,40 @@
         <div class="container mx-auto text-center px-4">
             <h1 class="text-4xl font-bold text-[#002500] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
             <div class="flex flex-wrap -mx-4 mt-4">
-                @foreach($choices as $choice)
-                <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-white [rgba(205,213,210,0.7)]  p-8 shadow-md rounded-lg flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
-                        <div class="flex justify-center mb-2">
-                            <img src="{{ $choice ? asset('storage/' . $choice->image) : '' }}" alt="Lock Icon" class="w-40 h-40 object-cover mb-2">
+                @foreach ($choices as $choice)
+                    <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="bg-white p-8 shadow-md rounded-lg flex flex-col h-full hover:shadow-lg hover:scale-105 transition-transform duration-200">
+                            <div class="flex justify-center mb-2">
+                                <img src="{{ $choice ? asset('storage/' . $choice->image) : '' }}" alt="Choice Image"
+                                    class="w-40 h-40 object-cover mb-2">
+                            </div>
+                            <h3 class="text-xl font-bold text-[#16423C] mb-2">{{ $choice->judul }}</h3>
+                            <p class="text-[#16423C]">{{ $choice->deskripsi }}</p>
                         </div>
-                        <h3 class="text-xl font-bold text-[#16423C] mb-2">{{ $choice->judul }}</h3>
-                        <p class="text-[#16423C]">{{ $choice->deskripsi }}</p>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section>
-    {{-- SERVICE START --}}
+    {{-- SERVICE END --}}
 
     {{-- ABOUT US SECTION --}}
     <section class="bg-gray-100 half-card">
         <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                @foreach($tentangs as $tentang)
-                <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="100">
-                    <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image"
-                        class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md object-cover rounded-lg ">
-                </div>
-                <div class="max-w-lg">
-                    <h2 class="text-3xl font-semibold text-[#16423C] sm:text-2xl" data-aos="fade-up">Tentang</h2>
-                    <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">SMK Bina Sejathera 3</h2>
-                    <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">{{ $tentang->deskripsi }}</p>
-                </div>
+                @foreach ($tentangs as $tentang)
+                    <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="100">
+                        <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image"
+                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md object-cover rounded-lg ">
+                    </div>
+                    <div class="max-w-lg">
+                        <h2 class="text-3xl font-semibold text-[#16423C] sm:text-2xl" data-aos="fade-up">Tentang</h2>
+                        <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">SMK Bina
+                            Sejahtera 3</h2>
+                        <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">
+                            {{ $tentang->deskripsi }}</p>
+                    </div>
                 @endforeach
             </div>
         </div>
@@ -84,7 +84,6 @@
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
             <div class="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
-
                 <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-4 sm:gap-8" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="flex flex-col">
@@ -111,18 +110,13 @@
             </div>
         </div>
     </section>
-
-    <script>
-        new PureCounter();
-    </script>
     {{-- STATISTIK END --}}
 
     {{-- TESTI START --}}
     <section class="bg-white mt-10">
-        <div
-            class="half-green-card mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+        <div class="half-green-card mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8 xl:py-24">
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-                <div class="max-w-xl text-left ltr:sm:text-left rtl:sm:text-right" data-aos="fade-up">
+                <div class="max-w-xl text-left sm:text-left" data-aos="fade-up">
                     <h2 class="text-2xl font-bold tracking-tight text-[#6A9C89] sm:text-2xl">
                         TESTIMONI
                     </h2>
@@ -151,13 +145,14 @@
                 <div class="-mx-6 lg:col-span-2 lg:mx-0">
                     {{-- Card --}}
                     <div id="keen-slider" class="keen-slider" data-aos="fade-left" data-aos-delay="100">
-                        @foreach($testimonis as $testimoni)
+                        @foreach ($testimonis as $testimoni)
                             @php
                                 $backgroundClass = ['bg-[#0FA3B1]', 'bg-[#FF5733]', 'bg-[#4CAF50]'][$loop->index % 3];
                             @endphp
 
                             <div class="keen-slider__slide">
-                                <blockquote class="rounded-xl flex h-full flex-col justify-between {{ $backgroundClass }} p-6 shadow-sm sm:p-8 lg:p-12">
+                                <blockquote
+                                    class="rounded-xl flex h-full flex-col justify-between {{ $backgroundClass }} p-6 shadow-sm sm:p-8 lg:p-12">
                                     <div>
                                         <div class="mt-4">
                                             <p class="mt-4 leading-relaxed text-white">
@@ -167,7 +162,8 @@
                                     </div>
 
                                     <footer class="mt-4 text-sm font-medium text-white sm:mt-6 flex items-center">
-                                        <img src="{{ $testimoni ? asset('storage/' . $testimoni->image) : '' }}" alt="Michael Scott" class="w-10 h-10 rounded-full mr-2">
+                                        <img src="{{ $testimoni ? asset('storage/' . $testimoni->image) : '' }}"
+                                            alt="Michael Scott" class="w-10 h-10 rounded-full mr-2">
                                         {{ $testimoni->nama }}
                                     </footer>
                                 </blockquote>
@@ -196,49 +192,13 @@
             </div>
         </div>
     </section>
-
-    <script type="module">
-        import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
-
-        const keenSlider = new KeenSlider(
-            '#keen-slider', {
-                loop: true,
-                slides: {
-                    origin: 'center',
-                    perView: 1.25,
-                    spacing: 16,
-                },
-                breakpoints: {
-                    '(min-width: 1024px)': {
-                        slides: {
-                            origin: 'auto',
-                            perView: 1.5,
-                            spacing: 32,
-                        },
-                    },
-                },
-            },
-            []
-        )
-
-        const keenSliderPrevious = document.getElementById('keen-slider-previous')
-        const keenSliderNext = document.getElementById('keen-slider-next')
-
-        const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop')
-        const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop')
-
-        keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
-        keenSliderNext.addEventListener('click', () => keenSlider.next())
-
-        keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
-        keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
-    </script>
     {{-- TESTI END --}}
 
     {{-- Latest News START --}}
     <section class="py-8 px-4">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" >Berita Terbaru</h1>
+            <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" data-aos="fade-up">Berita
+                Terbaru</h1>
 
             <div class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8"
                 >
@@ -253,7 +213,8 @@
                         <span class="text-[#16423C] font-medium mb-3 block">Jan 01, 2023</span>
                         <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">Clever ways to invest in product
                             to organize your portfolio</h4>
-                        <p class="text-[#16423C] leading-6 mb-10">Discover smart investment strategies to streamline and
+                        <p class="text-[#16423C] leading-6 mb-10">Discover smart investment strategies to streamline
+                            and
                             organize your portfolio..</p>
                         <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read
                             more..</a>
@@ -302,5 +263,4 @@
         </div>
     </section>
     {{-- TEAM END --}}
-
 </div>

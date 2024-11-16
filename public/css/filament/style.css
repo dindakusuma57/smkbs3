@@ -6,20 +6,6 @@
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
-
-  }
-
-.navbar {
-    background: none;
-    border: none;
-    padding: 0;
-  }
-
-  .navbar-nav .nav-item,
-  .navbar-brand,
-  .navbar-nav .nav-link {
-    padding: 0;
-    margin: 0;
   }
 
   .text-dark {
@@ -34,8 +20,6 @@
     background: linear-gradient(to left, #C4DAD2 50%, transparent 50%);
   }
 
-
-  /* Animasi untuk efek visual */
 dd {
     opacity: 0;
     animation: fadeIn 1s forwards;
