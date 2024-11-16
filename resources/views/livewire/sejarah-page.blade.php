@@ -24,7 +24,7 @@
                         <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Sejarah</h2>
                     <p class="sm:text-2xl text-[#16423C] font-medium" data-aos="fade-up">SMK Bina Sejahtera 3</p>
                     @foreach($sejarahs as $sejarah)
-                        <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">{{ $sejarah->deskripsi }}</p>
+                        <p class="mt-4 text-[#16423C] text-lg text-justify" data-aos="fade-up" data-aos-delay="200">{{ $sejarah->deskripsi }}</p>
                     </div>
                     <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="5">
                         <img src="{{ $sejarah ? asset('storage/' . $sejarah->image) : '' }}" alt="About Us Image"

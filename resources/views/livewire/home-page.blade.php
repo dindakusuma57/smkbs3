@@ -59,23 +59,20 @@
     {{-- SERVICE END --}}
 
     {{-- ABOUT US SECTION --}}
-    <section class="bg-gray-100 half-card">
-        <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <section class="relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-[#C4DAD2] w-3/4 h-full"></div>
+        <div class="relative container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            @foreach ($tentangs as $tentang )
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                @foreach ($tentangs as $tentang)
-                    <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="100">
-                        <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image"
-                            class="transition-transform transform hover:scale-105 hover:shadow-lg shadow-md object-cover rounded-lg ">
-                    </div>
-                    <div class="max-w-lg">
-                        <h2 class="text-3xl font-semibold text-[#16423C] sm:text-2xl" data-aos="fade-up">Tentang</h2>
-                        <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">SMK Bina
-                            Sejahtera 3</h2>
-                        <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">
-                            {{ $tentang->deskripsi }}</p>
-                    </div>
-                @endforeach
+                <div class="mt-12 md:mt-0">
+                    <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+                </div>
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Tentang <br> SMK Bina Sejahtera 3</h2>
+                    <p class="mt-4 text-gray-600 text-lg text-justify">{{ $tentang -> deskripsi }}</p>
+                </div>
             </div>
+            @endforeach
         </div>
     </section>
 
@@ -114,7 +111,7 @@
 
     {{-- TESTI START --}}
     <section class="bg-white mt-10">
-        <div class="half-green-card mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8 xl:py-24">
+        <div class="half-green-card mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
                 <div class="max-w-xl text-left sm:text-left" data-aos="fade-up">
                     <h2 class="text-2xl font-bold tracking-tight text-[#6A9C89] sm:text-2xl">
