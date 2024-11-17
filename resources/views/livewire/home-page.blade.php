@@ -65,11 +65,12 @@
             @foreach ($tentangs as $tentang )
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div class="mt-12 md:mt-0">
-                    <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+                    <img src="{{ $tentang ? asset('storage/' . $tentang->image) : '' }}" alt="About Us Image"
+                    class="object-cover rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
                 </div>
                 <div class="max-w-2xl">
                     <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Tentang <br> SMK Bina Sejahtera 3</h2>
-                    <p class="mt-4 text-gray-600 text-lg text-justify">{{ $tentang -> deskripsi }}</p>
+                    <p class="mt-4 text-[#16423C] text-lg text-justify">{{ $tentang -> deskripsi }}</p>
                 </div>
             </div>
             @endforeach
@@ -184,26 +185,23 @@
             <h1 class="mt-4 font-manrope text-4xl font-bold text-[#16423C] text-center mb-8" data-aos="fade-up">Berita
                 Terbaru</h1>
 
-            <div class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8"
-                >
+            <div class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
                 {{-- Card --}}
+                @foreach ($recentBeritas as $recent)
                 <div
                     class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
                     <div class="flex items-center">
-                        <img src="https://pagedone.io/asset/uploads/1696244317.png" alt="blogs tailwind section"
-                            class="rounded-t-2xl w-full object-cover">
+                        <img src="{{ asset('storage/' . $recent->image) }}" alt="blogs tailwind section"
+                            class="rounded-t-2xl w-full h-48 object-cover">
                     </div>
                     <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                        <span class="text-[#16423C] font-medium mb-3 block">Jan 01, 2023</span>
-                        <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">Clever ways to invest in product
-                            to organize your portfolio</h4>
-                        <p class="text-[#16423C] leading-6 mb-10">Discover smart investment strategies to streamline
-                            and
-                            organize your portfolio..</p>
-                        <a href="javascript:;" class="cursor-pointer text-lg text-[#16423C] font-semibold">Read
-                            more..</a>
+                        <span class="text-[#16423C] font-medium mb-3 block">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
+                        <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">{{ $recent->judul }}</h4>
+                        <p class="text-sm text-[#116453] mt-2 mb-4">{{ Str::limit($recent->deskripsi, 80) }}</p>
+                        <a href="{{ route('berita.show', $recent->slug) }}" class="cursor-pointer text-lg text-[#16423C] font-semibold">Baca Selengkapnya..</a>
                     </div>
                 </div>
+                @endforeach
             </div>
             <a href="/berita"
                 class="mt-8 cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-[#16423C] font-semibold mx-auto transition-all duration-300 hover:bg-gray-100">View

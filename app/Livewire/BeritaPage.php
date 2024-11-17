@@ -25,6 +25,8 @@ class BeritaPage extends Component
 
     public function render()
     {
+        $recentBeritas = Berita::latest()->take(1)->get();
+
         $categories = Category::all();
         $beritas = Berita::when($this->selectedCategory, function ($query) {
             $query->where('category_id', $this->selectedCategory);
@@ -33,6 +35,7 @@ class BeritaPage extends Component
         return view('livewire.berita-page', [
             'categories' => $categories,
             'beritas' => $beritas,
+            'recentBeritas' => $recentBeritas,
         ]);
     }
 }

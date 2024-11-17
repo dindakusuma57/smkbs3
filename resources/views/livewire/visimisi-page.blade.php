@@ -48,7 +48,6 @@
                 SMK Bina Sejahtera 3
             </p>
 
-
           <ul class="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
             @foreach ($misis as $misi )
             <li data-aos="flip-left" data-aos-delay="100" class="rounded-xl bg-white hover:bg-[rgba(205,213,210,0.7)] px-6 py-8 shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-200">

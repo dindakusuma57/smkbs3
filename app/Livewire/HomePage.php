@@ -5,8 +5,13 @@ use App\Models\choice;
 use App\Models\tentang;
 use App\Models\testimoni;
 use App\Models\statistik;
+use App\Models\Berita;
+use App\Models\pengajar;
 use Illuminate\Console\View\Components\Choice as ComponentsChoice;
 use Livewire\Component;
+use Livewire\Attributes\Title;
+
+#[Title('Beranda - Yayasan Bina Sejahtera')]
 
 class HomePage extends Component
 {
@@ -14,6 +19,7 @@ class HomePage extends Component
     public $tentangs;
     public $testimonis;
     public $statistiks;
+    public $pengajars;
 
     public function mount()
     {
@@ -21,11 +27,17 @@ class HomePage extends Component
         $this->tentangs = Tentang::all();
         $this->testimonis = Testimoni::all();
         $this->statistiks = Statistik::all();
+        $this->pengajars = Pengajar::all();
+
     }
 
     public function render()
     {
+        $recentBeritas = Berita::latest()->take(3)->get();
+
         $statistiks = Statistik::find(1);
-        return view('livewire.home-page');
+        return view('livewire.home-page',[
+            'recentBeritas' => $recentBeritas,
+        ]);
     }
 }

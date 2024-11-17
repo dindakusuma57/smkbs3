@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="css/filament/style.css">
+<script type="module" src="js/main.js"></script>
+
 <div>
     {{-- Hero --}}
     <section class="bg-white">

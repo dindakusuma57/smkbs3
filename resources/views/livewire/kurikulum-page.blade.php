@@ -13,12 +13,12 @@
 
     {{-- Keterangan Kurikulum --}}
     <section>
-        <div class="max-w-5xl mt-8 mx-auto  text-center mb-10 lg:mb-20">
+        <div class="max-w-6xl mt-8 mx-auto  text-center mb-10 lg:mb-20">
             <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Kurikulum</h1>
             <p class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
                 SMK Bina Sejahtera 3
             </p>
-            <p class="font-medium text-[#16423C] mt-4 justify-center text-base">Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi guru yang disanjung tinggi. Mendidik dengan hati akan menyentuh aspek psikologis dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
+            <p class="font-medium text-[#16423C] mt-4 justify-center text-base text-justify">Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi guru yang disanjung tinggi. Mendidik dengan hati akan menyentuh aspek psikologis dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
                 Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi guru yang disanjung tinggi. Mendidik dengan hati akan menyentuh aspek psikologis dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
                 Menekankan para prinsip panggilan jiwa sebagai dasar sebuah profesi guru yang disanjung tinggi. Mendidik dengan hati akan menyentuh aspek psikologis dari anak didik yang membuat proses pembelajaran dikelas penuh akan rasa kesadaran.
             </p>

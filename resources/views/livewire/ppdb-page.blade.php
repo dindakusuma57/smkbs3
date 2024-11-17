@@ -24,7 +24,7 @@
             </p>
             </div>
 
-            <p class="font-medium text-[#16423C] mt-4 justify-center text-base">
+            <p class="font-medium text-[#16423C] mt-4 text-justify text-base">
                 Assalamu’alaikum Warahmatullahi Wabarakatuh,
                 Salam sejahtera untuk kita semua,
                 Om Swastiastu,
