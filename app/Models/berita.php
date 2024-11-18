@@ -13,7 +13,7 @@ class berita extends Model
     protected $fillable = ['category_id', 'judul','slug', 'deskripsi', 'image','is_active'];
 
     protected $casts = [
-        'image' => 'string',
+        'image' => 'array',
     ];
 
     public function category() {

@@ -20,19 +20,25 @@
 
     {{-- Berita Terbaru --}}
     <section>
-        <div class="mx-auto mt-16 px-4 sm:px-6 lg:px-8">
-            <h1 data-aos="fade-up" class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Berita Terbaru</h1>
+        <div class="mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+            <h1 data-aos="fade-up" class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" >Berita Terbaru</h1>
             <p
             data-aos="fade-up"  class="mb-5 font-medium sm:text-2xl text-[#16423C] mt-2 text-base leading-7 inline border-b-4 border-[#6A9C89] pb-2 max-w-max">
                 SMK Bina Sejahtera 3
             </p>
 
             @foreach ($recentBeritas as $recent)
+
             <div
             data-aos="zoom-out" data-aos-delay="100" class="mt-8 sm:flex items-center shadow-md bg-white rounded-lg p-6 transition-transform transform hover:scale-150 hover:shadow-lg">
+
+            @php
+            $images = is_array($recent->image) ? $recent->image : explode(',', $recent->image);
+            @endphp
+
                 <div>
                     <img class="bg-cover rounded-lg"
-                        src="{{ asset('storage/' . $recent->image) }}"
+                        src="{{ asset('storage/' . trim($images[0])) }}"
                         alt="" />
                 </div>
                 <div class="md:px-10 sm:px-5">
@@ -41,7 +47,7 @@
                     <div class="flex justify-between mb-2">
                         <span class="font-thin text-sm">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
                         <a href="{{ route('berita.show', $recent->slug) }}">
-                            <span class="sm:block hidden mb-2 text-[#16423C] font-bold">Read more</span>
+                            <span class="sm:block hidden mb-2 text-[#16423C] font-bold text-lg">Read more ...</span>
                         </a>
                     </div>
                 </div>
@@ -73,12 +79,18 @@
                 @endforeach
             </div>
         </div>
+
         {{-- card --}}
         <div class="grid md:grid-cols-4 gap-6 ">
             @forelse ($beritas as $berita)
+
+            @php
+                            $images = is_array($berita->image) ? $berita->image : explode(',', $berita->image);
+                        @endphp
+
             <a href="{{ route('berita.show', $recent->slug) }}">
             <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-lg p-4 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <img class="rounded-lg mb-4 w-full h-48 object-cover" src="{{ $berita ? asset('storage/' . $berita->image) : '' }}" alt="Gambar Berita">
+                <img class="rounded-lg mb-4 w-full h-48 object-cover" src="{{ asset('storage/' . $images[0]) }}" alt="Gambar Berita">
                 <h2 class="text-lg font-bold text-[#116453]">{{ $berita->judul }}</h2>
                 <p class="text-sm text-[#116453] mt-2 mb-4">{{ Str::limit($berita->deskripsi, 80) }}</p>
                 <span class="text-xs text-gray-600 flex justify-end">{{ \Carbon\Carbon::parse($berita->created_at)->format('d-m-Y') }}</span>

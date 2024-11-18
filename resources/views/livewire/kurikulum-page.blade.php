@@ -1,4 +1,5 @@
 <div>
+    {{-- HERO --}}
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>

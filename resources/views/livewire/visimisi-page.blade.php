@@ -5,6 +5,7 @@
 </script>
 
 <div>
+    {{-- hero --}}
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
@@ -19,7 +20,7 @@
 
     {{-- Visi --}}
     <section class="bg-gray-100">
-        <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div class="max-w-lg">
                     @foreach ($visis as $visi )

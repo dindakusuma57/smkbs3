@@ -65,8 +65,10 @@ class BeritaResource extends Resource
                         ->unique(Berita::class, 'slug', ignoreRecord:true),
 
                     FileUpload::make('image')
-                        ->image()
-                        ->directory('berita'),
+                        ->directory('berita')
+                        ->multiple()
+                        ->maxFiles(5)
+                        ->reorderable(),
 
                     MarkdownEditor::make('deskripsi')
                         ->columnSpanFull()
