@@ -8,7 +8,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
     </head>
-    <body class="bg-white">
+    <body class="bg-gray-100">
 
         @livewire('partials.navbar')
         <main>

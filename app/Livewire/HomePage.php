@@ -19,7 +19,6 @@ class HomePage extends Component
     public $tentangs;
     public $testimonis;
     public $statistiks;
-    public $pengajars;
 
     public function mount()
     {
@@ -27,17 +26,20 @@ class HomePage extends Component
         $this->tentangs = Tentang::all();
         $this->testimonis = Testimoni::all();
         $this->statistiks = Statistik::all();
-        $this->pengajars = Pengajar::all();
 
     }
+
 
     public function render()
     {
         $recentBeritas = Berita::latest()->take(3)->get();
 
-        $statistiks = Statistik::find(1);
+        $pengajars = Pengajar::take(6)->get();
+
+        // $statistiks = Statistik::find(1);
         return view('livewire.home-page',[
             'recentBeritas' => $recentBeritas,
+            'pengajars' => $pengajars,
         ]);
     }
 }

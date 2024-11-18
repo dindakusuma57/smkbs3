@@ -1,3 +1,9 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 <div>
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
@@ -12,17 +18,18 @@
         </div>
     </section>
 
+    {{-- Berita Terbaru --}}
     <section>
         <div class="mx-auto mt-16 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Berita Terbaru</h1>
+            <h1 data-aos="fade-up" class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Berita Terbaru</h1>
             <p
-                class="mb-5 font-medium sm:text-2xl text-[#16423C] mt-2 text-base leading-7 inline border-b-4 border-[#6A9C89] pb-2 max-w-max">
+            data-aos="fade-up"  class="mb-5 font-medium sm:text-2xl text-[#16423C] mt-2 text-base leading-7 inline border-b-4 border-[#6A9C89] pb-2 max-w-max">
                 SMK Bina Sejahtera 3
             </p>
 
             @foreach ($recentBeritas as $recent)
             <div
-                class="mt-8 sm:flex items-center shadow-md bg-white rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+            data-aos="zoom-out" data-aos-delay="100" class="mt-8 sm:flex items-center shadow-md bg-white rounded-lg p-6 transition-transform transform hover:scale-150 hover:shadow-lg">
                 <div>
                     <img class="bg-cover rounded-lg"
                         src="{{ asset('storage/' . $recent->image) }}"
@@ -43,23 +50,22 @@
         </div>
     </section>
 
-    {{-- berita --}}
+    {{-- Berita Semua --}}
     <section class="mx-auto py-16 px-4 sm:px-6 lg:px-8">
-
         <div class="flex space-x-2 mb-2 justify-between">
             <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl mb-6" data-aos="fade-up">
                 Berita
             </h1>
 
             <div>
-                <span wire:click="selectCategory()"
+                <span data-aos="fade-up" wire:click="selectCategory()"
                     class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }}
                         text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                     Semua
                 </span>
 
                 @foreach ($categories as $category)
-                    <span wire:click="selectCategory({{ $category->id }})"
+                    <span data-aos="fade-up"  wire:click="selectCategory({{ $category->id }})"
                         class="mx-2 cursor-pointer {{ $selectedCategory === $category->id ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }}
                             text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                         {{ $category->judul }}
@@ -67,15 +73,17 @@
                 @endforeach
             </div>
         </div>
-
-        <div class="grid md:grid-cols-4 gap-6">
+        {{-- card --}}
+        <div class="grid md:grid-cols-4 gap-6 ">
             @forelse ($beritas as $berita)
-            <div class="bg-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <a href="{{ route('berita.show', $recent->slug) }}">
+            <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-lg p-4 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
                 <img class="rounded-lg mb-4 w-full h-48 object-cover" src="{{ $berita ? asset('storage/' . $berita->image) : '' }}" alt="Gambar Berita">
                 <h2 class="text-lg font-bold text-[#116453]">{{ $berita->judul }}</h2>
                 <p class="text-sm text-[#116453] mt-2 mb-4">{{ Str::limit($berita->deskripsi, 80) }}</p>
                 <span class="text-xs text-gray-600 flex justify-end">{{ \Carbon\Carbon::parse($berita->created_at)->format('d-m-Y') }}</span>
             </div>
+            </a>
 
             @empty
                 <p class="col-span-3 text-center text-gray-500">Tidak ada berita ditemukan.</p>
