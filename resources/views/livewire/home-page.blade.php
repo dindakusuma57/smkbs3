@@ -194,10 +194,15 @@
                 class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
                 {{-- Card --}}
                 @foreach ($recentBeritas as $recent)
+
+                @php
+                    $images = is_array($recent->image) ? $recent->image : explode(',', $recent->image);
+                @endphp
+                    <a href="{{ route('berita.show', $recent->slug) }}">
                     <div
                         class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
                         <div class="flex items-center">
-                            <img src="{{ asset('storage/' . $recent->image) }}" alt="blogs tailwind section"
+                            <img src="{{ asset('storage/' . trim($images[0])) }}" alt="blogs tailwind section"
                                 class="rounded-t-2xl w-full h-48 object-cover">
                         </div>
                         <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
@@ -209,6 +214,7 @@
                                 class="cursor-pointer text-lg text-[#16423C] font-semibold">Baca Selengkapnya..</a>
                         </div>
                     </div>
+                    </a>
                 @endforeach
             </div>
             <a href="/berita"

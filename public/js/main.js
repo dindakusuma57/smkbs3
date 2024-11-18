@@ -1,13 +1,17 @@
-//Statistik
+// Statistik
 document.addEventListener('DOMContentLoaded', () => {
     new PureCounter();
 });
 
-//Body
+// Body
 document.body.style.overflowX = 'hidden';
 
+// Function to change image source dynamically
+function changeImage(src) {
+    document.getElementById('mainImage').src = src;
+}
 
-// TESTI
+// KeenSlider Initialization
 import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,4 +56,3 @@ document.addEventListener('DOMContentLoaded', () => {
         keenSliderNextDesktop.addEventListener('click', () => keenSlider.next());
     }
 });
-
