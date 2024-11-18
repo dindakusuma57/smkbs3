@@ -59,6 +59,7 @@
 
     {{--  All berita --}}
     <section class="mx-auto py-16 px-4 sm:px-6 lg:px-8">
+
         {{-- Category --}}
         <div class="flex space-x-2 mb-2 justify-between">
             <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl mb-6" data-aos="fade-up">
@@ -81,6 +82,7 @@
                 @endforeach
             </div>
         </div>
+        {{-- Category End --}}
 
         {{-- Card --}}
         <div data-aos="fade-up" class="grid md:grid-cols-4 gap-6">
