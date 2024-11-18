@@ -11,7 +11,8 @@
 
 <div>
     {{-- HERO START --}}
-    <section class="bg-gradient-to-b from-[#116453] to-[#032830]">
+    <section class="bg-cover bg-center sm:bg-cover md:bg-cover lg:bg-center xl:bg-cover"
+        style="background-image: url('img/newhero.png'); background-size: cover; background-position: center;">
         <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
                 data-aos="fade-in">
@@ -27,9 +28,6 @@
                         class="px-8 py-3 text-lg font-semibold rounded-lg bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md">Info
                         PPDB</a>
                 </div>
-            </div>
-            <div class="flex items-center justify-center h-72 sm:h-90 lg:h-96 xl:h-112 2xl:h-128">
-                <img src="img/hero1.png" class="object-cover h-full w-full" alt="Hero Image" loading="lazy">
             </div>
         </div>
     </section>
