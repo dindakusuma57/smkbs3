@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\GaleriResource\Pages;
-use App\Filament\Resources\GaleriResource\RelationManagers;
 use App\Models\Galeri;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -14,9 +13,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Tables\Columns\ImageColumn;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class GaleriResource extends Resource
@@ -36,10 +33,6 @@ class GaleriResource extends Resource
                             ->required()
                             ->maxLength(255),
 
-                        MarkdownEditor::make('deskripsi')
-                            ->columnSpanFull()
-                            ->fileAttachmentsDirectory('galeri'),
-
                         FileUpload::make('image')
                             ->image()
                             ->directory('galeri')
@@ -53,8 +46,6 @@ class GaleriResource extends Resource
         return $table
         ->columns([
             Tables\Columns\TextColumn::make('judul')
-                ->searchable(),
-            Tables\Columns\TextColumn::make('deskripsi')
                 ->searchable(),
             ImageColumn::make('image')
                 ->label('Image')

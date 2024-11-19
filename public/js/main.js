@@ -56,3 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
         keenSliderNextDesktop.addEventListener('click', () => keenSlider.next());
     }
 });
+
+//NAVBAR
+const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const ctaButton = document.getElementById('cta-button');
+    const navbarBrand = document.getElementById('navbar-brand');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-white', 'shadow-md');
+        navLinks.forEach(link => link.style.color = '#16423C');
+        navbarBrand.style.color = '#16423C';
+        ctaButton.style.color = '#16423C';
+      } else {
+        navbar.classList.remove('bg-white', 'shadow-md');
+        navLinks.forEach(link => link.style.color = 'white');
+        navbarBrand.style.color = 'white';
+        ctaButton.style.color = 'white';
+      }
+    });
+
+    
+
+
+

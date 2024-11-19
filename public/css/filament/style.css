@@ -8,6 +8,24 @@
     transition: background-color 0.3s;
   }
 
+  .navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  .navbar a {
+    transition: color 0.3s ease;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem; 
+    }
+
+    .group-hover\:block {
+        display: block !important;
+        animation: fadeIn 0.2s;
+    }
+
+
+
   .text-dark {
     color: black !important;
   }

@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class galeri extends Model
 {
     use HasFactory;
-    protected $fillable = ['judul', 'deskripsi', 'image'];
+    protected $fillable = ['judul', 'image'];
 }

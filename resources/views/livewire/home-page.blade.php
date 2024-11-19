@@ -37,7 +37,7 @@
     {{-- SERVICE START --}}
     <section class="bg-gray-50 py-8 px-4" data-aos="fade-up">
         <div class="container mx-auto text-center px-4">
-            <h1 class="text-4xl font-bold text-[#002500] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
+            <h1 class="text-4xl font-bold text-[#16423C] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
             <div class="flex flex-wrap -mx-4 mt-4">
                 @foreach ($choices as $choice)
                     <div class="w-full md:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
