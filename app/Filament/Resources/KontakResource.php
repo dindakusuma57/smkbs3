@@ -34,11 +34,15 @@ class KontakResource extends Resource
             Section::make([
                 Grid::make()
                     ->schema([
-                        TextInput::make('judul')
+                        TextInput::make('alamat')
                             ->required()
                             ->maxLength(255),
 
-                        MarkdownEditor::make('deskripsi')
+                        MarkdownEditor::make('sosmed')
+                            ->columnSpanFull()
+                            ->fileAttachmentsDirectory('kontak'),
+
+                        MarkdownEditor::make('kontak')
                             ->columnSpanFull()
                             ->fileAttachmentsDirectory('kontak'),
                     ])
@@ -50,9 +54,11 @@ class KontakResource extends Resource
     {
         return $table
         ->columns([
-            Tables\Columns\TextColumn::make('judul')
+            Tables\Columns\TextColumn::make('alamat')
                 ->searchable(),
-            Tables\Columns\TextColumn::make('deskripsi')
+            Tables\Columns\TextColumn::make('sosmed')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('kontak')
                 ->searchable(),
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()

@@ -72,7 +72,8 @@
                         <h2 data-aos="fade-up" class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">
                             Tentang <br> SMK Bina Sejahtera 3
                         </h2>
-                        <p data-aos="fade-up" data-aos-delay="100" class="mt-4 text-[#16423C] text-lg text-justify leading-relaxed">
+                        <p data-aos="fade-up" data-aos-delay="100"
+                            class="mt-4 text-[#16423C] text-lg text-justify leading-relaxed">
                             {{ $tentang->deskripsi }}
                         </p>
                     </div>
@@ -188,32 +189,33 @@
     {{-- Latest News START --}}
     <section class="bg-gray-100 py-8 px-4">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 class="font-manrope text-4xl font-bold text-[#16423C] text-center mb-4" >Berita
+            <h1 class="font-manrope text-4xl font-bold text-[#16423C] text-center mb-4">Berita
                 Terbaru</h1>
             <div
                 class="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
                 {{-- Card --}}
                 @foreach ($recentBeritas as $recent)
-
-                @php
-                    $images = is_array($recent->image) ? $recent->image : explode(',', $recent->image);
-                @endphp
+                    @php
+                        $images = is_array($recent->image) ? $recent->image : explode(',', $recent->image);
+                    @endphp
                     <a href="{{ route('berita.show', $recent->slug) }}">
-                    <div
-                        class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                        <div class="flex items-center">
-                            <img src="{{ asset('storage/' . trim($images[0])) }}" alt="blogs tailwind section"
-                                class="rounded-t-2xl w-full h-48 object-cover">
+                        <div
+                            class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                            <div class="flex items-center">
+                                <img src="{{ asset('storage/' . trim($images[0])) }}" alt="blogs tailwind section"
+                                    class="rounded-t-2xl w-full h-48 object-cover">
+                            </div>
+                            <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                                <span
+                                    class="text-[#16423C] font-medium mb-3 block">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
+                                <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">{{ $recent->judul }}
+                                </h4>
+                                <p class="text-sm text-[#116453] mt-2 mb-4">{{ Str::limit($recent->deskripsi, 80) }}
+                                </p>
+                                <a href="{{ route('berita.show', $recent->slug) }}"
+                                    class="cursor-pointer text-lg text-[#16423C] font-semibold">Baca Selengkapnya..</a>
+                            </div>
                         </div>
-                        <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                            <span
-                                class="text-[#16423C] font-medium mb-3 block">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
-                            <h4 class="text-xl text-[#16423C] font-medium leading-8 mb-5">{{ $recent->judul }}</h4>
-                            <p class="text-sm text-[#116453] mt-2 mb-4">{{ Str::limit($recent->deskripsi, 80) }}</p>
-                            <a href="{{ route('berita.show', $recent->slug) }}"
-                                class="cursor-pointer text-lg text-[#16423C] font-semibold">Baca Selengkapnya..</a>
-                        </div>
-                    </div>
                     </a>
                 @endforeach
             </div>
@@ -235,25 +237,25 @@
                         class="font-manrope text-5xl text-[#16423C] font-bold leading-[4rem] mb-7 text-center lg:text-left">
                         SMK Bina Sejahtera 3</h2>
                     <a href="/guru"><button
-                        class="cursor-pointer py-3 px-8 w-60 bg-[#6A9C89] text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-[#16423C] mx-auto lg:mx-0">
-                        Lihat Semua Pengajar
-                    </button>
+                            class="cursor-pointer py-3 px-8 w-60 bg-[#6A9C89] text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-[#16423C] mx-auto lg:mx-0">
+                            Lihat Semua Pengajar
+                        </button>
                     </a>
                 </div>
                 <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 py-8 max-lg:max-w-2xl">
                     <div class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">
                         @foreach ($pengajars as $pengajar)
-                        <div
-                        class="relative transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl mx-auto min-[450px]:ml-0 md:mx-auto">
-                        <img src="{{ asset('storage/' . $pengajar->image) }}" alt="{{ $pengajar->nama }}"
-                            class="absolute inset-0 w-full h-full rounded-2xl object-cover">
+                            <div
+                                class="relative transition-transform transform hover:scale-105 hover:shadow-lg shadow-md w-44 h-56 rounded-2xl mx-auto min-[450px]:ml-0 md:mx-auto">
+                                <img src="{{ asset('storage/' . $pengajar->image) }}" alt="{{ $pengajar->nama }}"
+                                    class="absolute inset-0 w-full h-full rounded-2xl object-cover">
 
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-                            <p class="text-sm text-center font-medium text-white">{{ $pengajar->nama }} <br>
-                                {{ $pengajar->keterangan }}</p>
-                        </div>
-                    </div>
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                                    <p class="text-sm text-center font-medium text-white">{{ $pengajar->nama }} <br>
+                                        {{ $pengajar->keterangan }}</p>
+                                </div>
+                            </div>
                         @endforeach
                     </div>
 

@@ -12,17 +12,18 @@
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
-            <div class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
+            <div
+                class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
                 <h1 class="mt-8 text-= lg:text-4xl font-semibold">{{ $berita->judul }}</h1>
                 <h3 class="mt-4 text-lg font-semibold">
                     <a href="#" class="text-white hover:underline">Beranda</a> &gt; <span><a href="/berita"
-                        class="text-white hover:underline">Berita</a> &gt; </span><span>{{ $berita->slug }}</span>
+                            class="text-white hover:underline">Berita</a> &gt; </span><span>{{ $berita->slug }}</span>
                 </h3>
             </div>
         </div>
     </section>
 
-    {{-- Berita utama--}}
+    {{-- Berita utama --}}
     <section class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
@@ -48,8 +49,6 @@
                             @endforeach
                         </div>
                     </div>
-
-                    {{-- text --}}
                     <div class="space-y-4">
                         <h1
                             class="text-[#16423C] text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
@@ -95,7 +94,8 @@
                                     alt="Related News" class="aspect-[5/3] overflow-hidden rounded-md object-cover" />
 
                                 <div class="space-y-1">
-                                    <h4 class="text-sm font-medium leading-tight text-[#16423C]">{{ $recent->judul }}</h4>
+                                    <h4 class="text-sm font-medium leading-tight text-[#16423C]">{{ $recent->judul }}
+                                    </h4>
                                     <p class="text-xs text-gray-500 dark:text-gray-400">
                                         {{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}
                                     </p>

@@ -24,9 +24,9 @@
                 @foreach ($sejarahs as $sejarah)
                     <div data-aos="fade-up" class="max-w-2xl">
                         <h2 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Sejarah</h2>
-                        <p class="mt-2 sm:text-2xl text-[#16423C] font-medium" >SMK Bina Sejahtera 3
+                        <p class="mt-2 sm:text-2xl text-[#16423C] font-medium">SMK Bina Sejahtera 3
                         </p>
-                        <p class="mt-4 text-[#16423C] text-lg text-justify" >{{ $sejarah->deskripsi }}
+                        <p class="mt-4 text-[#16423C] text-lg text-justify">{{ $sejarah->deskripsi }}
                         </p>
                     </div>
                     <div class="mt-12 md:mt-0" data-aos="zoom-out" data-aos-delay="5">

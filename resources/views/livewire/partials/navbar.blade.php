@@ -5,7 +5,7 @@
     <nav id="navbar" class="navbar fixed top-0 left-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-3 py-2">
             <!-- Brand -->
-            <a href="#" class="flex items-center space-x-2">
+            <a href="/" class="flex items-center space-x-2">
                 <img src="{{ asset('img/logo.png') }}" class="h-8" alt="Flowbite Logo" />
                 <span id="navbar-brand" class="self-center text-lg font-semibold text-white">SMK Bina Sejahtera 3</span>
             </a>
@@ -32,7 +32,7 @@
             <!-- Menu Links -->
             <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
                 <ul class="flex flex-col font-medium md:flex-row md:space-x-4 mt-2 md:mt-0">
-                    <li><a href="/" class="nav-link block text-white hover:text-gray-300">Home</a></li>
+                    <li><a href="/" class="nav-link block text-white hover:text-gray-300">Beranda</a></li>
 
                     <li class="relative">
                         <button onclick="toggleDropdown('profileDropdown')"

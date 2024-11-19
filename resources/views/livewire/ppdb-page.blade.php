@@ -20,24 +20,26 @@
 
     {{-- Keterangan Kurikulum --}}
     <section>
-        @foreach ($ppdbs as $ppdb )
-        <div class="max-w-6xl mt-8 mx-auto  mb-10 lg:mb-8">
-            <div class="text-center">
-                <h1 class=" text-3xl font-extrabold  text-[#16423C] sm:text-4xl" data-aos="fade-up">Penerimaan Peserta
-                    Didik Baru</h1>
-                <p data-aos="fade-up" class="font-bold sm:text-2xl text-[#16423C] mt-2  text-base leading-7 ">
-                    SMK Bina Sejahtera 3
-                </p>
-                <p data-aos="fade-up"
-                    class="font-medium sm:text-2xl text-[#16423C] mt-2  text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
-                    Tahun Ajaran 2025/2026
+        @foreach ($ppdbs as $ppdb)
+            <div class="max-w-6xl mt-8 mx-auto  mb-10 lg:mb-8">
+                <div class="text-center">
+                    <h1 class=" text-3xl font-extrabold  text-[#16423C] sm:text-4xl" data-aos="fade-up">Penerimaan
+                        Peserta
+                        Didik Baru</h1>
+                    <p data-aos="fade-up" class="font-bold sm:text-2xl text-[#16423C] mt-2  text-base leading-7 ">
+                        SMK Bina Sejahtera 3
+                    </p>
+                    <p data-aos="fade-up"
+                        class="font-medium sm:text-2xl text-[#16423C] mt-2  text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
+                        Tahun Ajaran 2025/2026
+                    </p>
+                </div>
+
+                <p data-aos="fade-up" data-aos-delay="50"
+                    class="font-medium text-[#16423C] mt-4 text-justify text-base">
+                    {{ $ppdb->deskripsi }}
                 </p>
             </div>
-
-            <p data-aos="fade-up" data-aos-delay="50" class="font-medium text-[#16423C] mt-4 text-justify text-base">
-                {{ $ppdb -> deskripsi }}
-            </p>
-        </div>
         @endforeach
     </section>
 
