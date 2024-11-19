@@ -29,7 +29,7 @@
                             data-aos="fade-up">Sambutan</h2>
                         <p class="sm:text-2xl text-[#16423C] font-medium" data-aos="fade-up">Kepala Sekolah</p>
                         <p class="sm:text-2xl text-[#16423C] font-medium" data-aos="fade-up">SMK Bina Sejahtera 3</p>
-                        <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="200">
+                        <p class="mt-4 text-[#16423C] text-lg" data-aos="fade-up" data-aos-delay="50">
                             {{ $kepsek->deskripsi }}
                         </p>
                     </div>

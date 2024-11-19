@@ -30,7 +30,7 @@ class BeritaPage extends Component
         $categories = Category::all();
         $beritas = Berita::when($this->selectedCategory, function ($query) {
             $query->where('category_id', $this->selectedCategory);
-        })->paginate(9);
+        })->paginate(6);
 
         return view('livewire.berita-page', [
             'categories' => $categories,

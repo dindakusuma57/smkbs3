@@ -91,7 +91,7 @@
                     $images = is_array($berita->image) ? $berita->image : explode(',', $berita->image);
                 @endphp
 
-                <a href="{{ route('berita.show', $recent->slug) }}">
+                <a href="{{ route('berita.show', $berita->slug) }}">
                     <div class="bg-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
                         <img class="rounded-lg mb-4 w-full h-48 object-cover"
                             src="{{ asset('storage/' . $images[0]) }}" alt="Gambar Berita">

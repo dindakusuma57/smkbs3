@@ -1,3 +1,9 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 <div>
     <section class="bg-white">
         <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
@@ -18,16 +24,16 @@
             <div class="text-center">
                 <h1 class=" text-3xl font-extrabold  text-[#16423C] sm:text-4xl" data-aos="fade-up">Penerimaan Peserta
                     Didik Baru</h1>
-                <p class="font-bold sm:text-2xl text-[#16423C] mt-2  text-base leading-7 ">
+                <p data-aos="fade-up" class="font-bold sm:text-2xl text-[#16423C] mt-2  text-base leading-7 ">
                     SMK Bina Sejahtera 3
                 </p>
-                <p
+                <p data-aos="fade-up"
                     class="font-medium sm:text-2xl text-[#16423C] mt-2  text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
                     Tahun Ajaran 2025/2026
                 </p>
             </div>
 
-            <p class="font-medium text-[#16423C] mt-4 text-justify text-base">
+            <p data-aos="fade-up" data-aos-delay="50" class="font-medium text-[#16423C] mt-4 text-justify text-base">
                 Assalamu’alaikum Warahmatullahi Wabarakatuh,
                 Salam sejahtera untuk kita semua,
                 Om Swastiastu,
