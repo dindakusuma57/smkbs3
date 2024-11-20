@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="css/filament/style.css">
 <script type="module" src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+<script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -213,7 +214,8 @@
                                 <p class="text-sm text-[#116453] mt-2 mb-4">{{ Str::limit($recent->deskripsi, 80) }}
                                 </p>
                                 <a href="{{ route('berita.show', $recent->slug) }}"
-                                    class="cursor-pointer text-lg text-[#16423C] font-semibold">Baca Selengkapnya..</a>
+                                    class="cursor-pointer text-lg text-[#16423C] font-semibold flex justify-end">Baca
+                                    Selengkapnya..</a>
                             </div>
                         </div>
                     </a>
@@ -264,4 +266,8 @@
         </div>
     </section>
     {{-- TEAM END --}}
+
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 </div>

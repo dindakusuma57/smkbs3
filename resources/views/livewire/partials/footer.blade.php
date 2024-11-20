@@ -8,7 +8,7 @@
                     <span class="mx-2 self-center text-xl font-semibold whitespace-nowrap dark:text-white" id="navbar-brand">SMK Bina Sejahtera 3</span>
                 </a>
                 <p class="py-8 text-sm text-white lg:max-w-xs text-center lg:text-left">Sekolah Impian bersama, kami wujudkan pendidikan yang komprehensif untuk menciptakan generasi berprestasi, berakhlakul mulia dan siap menyongsong masa depan</p>
-                <a href="javascript:;"  class="py-2.5 px-5 h-9 block w-fit bg-[#C4DAD2] rounded-full shadow-sm text-xs text-[#116453] hover:text-white mx-auto transition-all  duration-500 hover:bg-[#116453] lg:mx-0">
+                <a href="javascript:;"  class="py-2.5 px-5 h-9 block w-fit bg-[#C4DAD2] rounded-full shadow-sm text-xs  text-[#116453] hover:text-white mx-auto transition-all  duration-500 hover:bg-[#116453] lg:mx-0">
                     Contact us
                 </a>
             </div>
@@ -17,9 +17,9 @@
                 <h4 class="text-lg text-white font-medium mb-7">SMK BS 3</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a href="/"  class="text-white hover:text-gray-900">Beranda</a></li>
-                    <li class="mb-6"><a href="#reason"  class=" text-white hover:text-gray-900">Alasan</a></li>
-                    <li class="mb-6"><a href="#about"  class=" text-white hover:text-gray-900">Tentang</a></li>
-                    <li><a href="#testi"  class=" text-white hover:text-gray-900">Testimoni</a></li>
+                    <li class="mb-6"><a href="/#reason"  class=" text-white hover:text-gray-900">Alasan</a></li>
+                    <li class="mb-6"><a href="/#about"  class=" text-white hover:text-gray-900">Tentang</a></li>
+                    <li><a href="/#testi"  class=" text-white hover:text-gray-900">Testimoni</a></li>
                 </ul>
             </div>
             <!--End Col-->
@@ -27,9 +27,9 @@
                 <h4 class="text-lg text-white font-medium mb-7">Profil</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a href="/sejarah"  class="text-white hover:text-gray-900">Sejarah</a></li>
-                    <li class="mb-6"><a href="#visi"  class=" text-white hover:text-gray-900">Visi</a></li>
-                    <li class="mb-6"><a href="#misi"  class=" text-white hover:text-gray-900">Misi</a></li>
-                    <li><a href="#tujuan"  class=" text-white hover:text-gray-900">Tujuan</a></li>
+                    <li class="mb-6"><a href="/visimisi#visi"  class=" text-white hover:text-gray-900">Visi</a></li>
+                    <li class="mb-6"><a href="/visimisi#misi"  class=" text-white hover:text-gray-900">Misi</a></li>
+                    <li><a href="/visimisi#tujuan"  class=" text-white hover:text-gray-900">Tujuan</a></li>
                 </ul>
             </div>
             <!--End Col-->
@@ -46,17 +46,17 @@
             <div class="lg:mx-auto text-left">
                 <h4 class="text-lg text-white font-medium mb-7">Blogs</h4>
                 <ul class="text-sm  transition-all duration-500">
-                    <li class="mb-6"><a href="#newsupdate"  class="text-white hover:text-gray-900">Berita terbaru</a></li>
-                    <li class="mb-6"><a href="#news"  class=" text-white hover:text-gray-900">Berita</a></li>
+                    <li class="mb-6"><a href="/berita#newsupdate"  class="text-white hover:text-gray-900">Berita terbaru</a></li>
+                    <li class="mb-6"><a href="/berita#news"  class=" text-white hover:text-gray-900">Berita</a></li>
                     <li class="mb-6"><a href="#galeri"  class=" text-white hover:text-gray-900">Galeri</a></li>
-                    <li><a href="javascript:;"  class=" text-white hover:text-gray-900">Events</a></li>
+                    <li><a href="javascript:;"  class=" text-white hover:text-gray-900">Kalender</a></li>
                 </ul>
             </div>
         </div>
         <!--Grid-->
         <div class="py-7 border-t border-gray-200">
             <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-                <span class="text-sm text-white ">©<a href="https://pagedone.io/">SMK Bina Sejahtera 3</a> 2024, All rights reserved.</span>
+                <span class="text-sm text-white ">©<a href="/">SMK Bina Sejahtera 3</a> 2024, All rights reserved.</span>
                 <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
                     <a href="https://www.instagram.com/smkbinasejahtera34"  class="w-9 h-9 rounded-full bg-[#C4DAD2] flex justify-center items-center hover:bg-indigo-600">
                         <svg class="w-[1.25rem] h-[1.125rem] text-[#16423C]" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

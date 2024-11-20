@@ -13,7 +13,7 @@
                 class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
                 <h1 class="mt-8 text-4xl lg:text-4xl font-semibold">Ekstrakulikuler</h1>
                 <h3 class="mt-4 text-lg font-semibold">
-                    <a href="#" class="text-white hover:underline">Home</a> &gt; <span>Ekstrakulikuler</span>
+                    <a href="/" class="text-white hover:underline">Beranda</a> &gt; <span>Ekstrakulikuler</span>
                 </h3>
             </div>
         </div>
@@ -22,7 +22,7 @@
     {{-- Keterangan Ekskul --}}
     <section>
         @foreach ($deskeskuls as $deskeskul)
-            <div class="max-w-6xl mt-8 mx-auto text-center mb-10 lg:mb-20">
+            <div class="max-w-6xl mt-8 mx-auto text-center mb-6 lg:mb-20">
                 <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Ekstrakulikuler</h1>
                 <p data-aos="fade-up"
                     class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
@@ -36,7 +36,7 @@
     </section>
 
     {{-- alasan ekskul section --}}
-    <section class="relative mt-6 ">
+    <section class="relative mt-4 ">
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 mb-6">
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
@@ -101,7 +101,6 @@
                             <img class="object-cover w-full h-full"
                                 src="{{ $ekstrakulikuler ? asset('storage/' . $ekstrakulikuler->image) : '' }}"
                                 alt="product image" />
-
                             <div
                                 class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-80">
                             </div>

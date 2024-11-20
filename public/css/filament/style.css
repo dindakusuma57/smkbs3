@@ -2,45 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    scroll-behavior: smooth;
-}
-
 .bg-scroll {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
-  }
+}
+.to-top{
+    background: #c4dad2;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size:32px;
+    color: #16423C;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+}
 
-  .navbar {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  }
-  .navbar a {
+.to-top.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+.navbar a {
     transition: color 0.3s ease;
-  }
+}
 
-  .nav-link {
+.nav-link {
     padding: 0.5rem 1rem;
-    }
+}
 
-    .group-hover\:block {
-        display: block !important;
-        animation: fadeIn 0.2s;
-    }
+.group-hover\:block {
+    display: block !important;
+    animation: fadeIn 0.2s;
+}
 
-
-
-  .text-dark {
+.text-dark {
     color: black !important;
-  }
+}
 
-  .half-green-card {
-    background: linear-gradient(to right, #C4DAD2 50%, transparent 50%);
-  }
+.half-green-card {
+    background: linear-gradient(to right, #c4dad2 50%, transparent 50%);
+}
 
-  .half-card {
-    background: linear-gradient(to left, #C4DAD2 50%, transparent 50%);
-  }
+.half-card {
+    background: linear-gradient(to left, #c4dad2 50%, transparent 50%);
+}
 
 dd {
     opacity: 0;
@@ -55,9 +74,3 @@ dd {
         opacity: 1;
     }
 }
-
-
-
-
-
-

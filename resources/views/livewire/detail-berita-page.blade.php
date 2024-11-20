@@ -10,13 +10,13 @@
 <div>
     {{-- Hero --}}
     <section class="bg-white">
-        <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
+        <div class="relative w-full bg-cover bg-center" style="background-image: url('{{ asset('img/landing2.jpeg') }}');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
             <div
                 class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
                 <h1 class="mt-8 text-= lg:text-4xl font-semibold">{{ $berita->judul }}</h1>
                 <h3 class="mt-4 text-lg font-semibold">
-                    <a href="#" class="text-white hover:underline">Beranda</a> &gt; <span><a href="/berita"
+                    <a href="/" class="text-white hover:underline">Beranda</a> &gt; <span><a href="/berita"
                             class="text-white hover:underline">Berita</a> &gt; </span><span>{{ $berita->slug }}</span>
                 </h3>
             </div>
@@ -30,7 +30,7 @@
             <div class="col-span-2 space-y-8">
                 <div class="space-y-4" data-aos="fade-up">
                     {{-- Gambar --}}
-                    <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div data-aos="zoom-out" class="w-full md:w-1/2 px-4 mb-8">
                         @php
                             $images = is_array($berita->image) ? $berita->image : explode(',', $berita->image);
                         @endphp
@@ -49,7 +49,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="space-y-4">
+                    <div data-aos="fade-up" class="space-y-4">
                         <h1
                             class="text-[#16423C] text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                             {{ $berita->judul }}
