@@ -27,7 +27,7 @@
                 </p>
                 <div class="flex flex-col sm:items-center sm:justify-center sm:flex-row sm:space-x-4 lg:justify-start">
                     <a href="/ppdb"
-                        class="px-8 py-3 text-lg font-semibold rounded-lg bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md">Info
+                        class="px-8 py-3 text-lg font-semibold rounded-full bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md">Info
                         PPDB</a>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                 @endforeach
             </div>
             <a href="/berita"
-                class="mt-4 cursor-pointer bg-[#C4DAD2] text-[#116453] hover:text-white hover:bg-[#116453] shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center font-semibold mx-auto transition-all duration-300">Lihat
+                class="mt-4 cursor-pointer bg-[#6A9C89] text-white hover:text-[#116453] hover:bg-[#116453] shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center font-semibold mx-auto transition-all duration-300">Lihat
                 Semua</a>
         </div>
     </section>

@@ -21,7 +21,9 @@ class BeritaPage extends Component
     public function selectCategory($categoryId = null)
     {
         $this->selectedCategory = $categoryId;
+        $this->resetPage();
     }
+
 
     public function render()
     {
@@ -39,5 +41,3 @@ class BeritaPage extends Component
         ]);
     }
 }
-
-

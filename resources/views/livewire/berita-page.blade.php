@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="css/filament/style.css">
+<script type="module" src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -37,13 +40,16 @@
                 <div data-aos="zoom-out"
                     class="mt-8 sm:flex items-center shadow-md bg-white rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
                     <div class="flex-1">
-                        <img class="bg-cover rounded-lg w-full h-auto" src="{{ asset('storage/' . trim($images[0])) }}" alt="" />
+                        <img class="bg-cover rounded-lg w-full h-auto" src="{{ asset('storage/' . trim($images[0])) }}"
+                            alt="" />
                     </div>
                     <div class="flex-1 md:px-10 sm:px-5">
                         <h1 class="text-[#16423C] font-bold text-2xl sm:text-3xl my-2">{{ $recent->judul }}</h1>
-                        <p class="text-[#16423C] mb-2 md:mb-6 text-base sm:text-lg">{{ Str::limit($recent->deskripsi, 150) }}....</p>
+                        <p class="text-[#16423C] mb-2 md:mb-6 text-base sm:text-lg">
+                            {{ Str::limit($recent->deskripsi, 150) }}....</p>
                         <div class="flex justify-between mb-2">
-                            <span class="font-thin text-sm">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
+                            <span
+                                class="font-thin text-sm">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
                             <a href="{{ route('berita.show', $recent->slug) }}">
                                 <span class="sm:block hidden mb-2 text-[#16423C] font-bold">Read more ...</span>
                             </a>
@@ -67,20 +73,21 @@
             </h1>
 
             <div>
-                <span wire:click="selectCategory()"
+                <span wire:click="selectCategory(null)"
                     class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }}
-                        text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
+                    text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                     Semua
                 </span>
 
                 @foreach ($categories as $category)
                     <span wire:click="selectCategory({{ $category->id }})"
                         class="mx-2 cursor-pointer {{ $selectedCategory === $category->id ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }}
-                            text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
+                        text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                         {{ $category->judul }}
                     </span>
                 @endforeach
             </div>
+
         </div>
         {{-- Category End --}}
 
@@ -92,11 +99,15 @@
                 @endphp
 
                 <a href="{{ route('berita.show', $berita->slug) }}">
-                    <div class="bg-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105 flex flex-col h-full">
-                        <img class="rounded-lg mb-4 w-full h-48 object-cover" src="{{ asset('storage/' . $images[0]) }}" alt="Gambar Berita">
+                    <div
+                        class="bg-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105 flex flex-col h-full">
+                        <img class="rounded-lg mb-4 w-full h-48 object-cover"
+                            src="{{ asset('storage/' . $images[0]) }}" alt="Gambar Berita">
                         <h2 class="text-lg font-bold text-[#116453] mb-2 flex-grow">{{ $berita->judul }}</h2>
-                        <p class="text-sm text-[#116453] mt-2 mb-4 flex-grow">{{ Str::limit($berita->deskripsi, 80) }}</p>
-                        <span class="text-xs text-gray-600 mt-auto">{{ \Carbon\Carbon::parse($berita->created_at)->format('d-m-Y') }}</span>
+                        <p class="text-sm text-[#116453] mt-2 mb-4 flex-grow">{{ Str::limit($berita->deskripsi, 80) }}
+                        </p>
+                        <span
+                            class="text-xs text-gray-600 mt-auto">{{ \Carbon\Carbon::parse($berita->created_at)->format('d-m-Y') }}</span>
                     </div>
                 </a>
 
@@ -136,4 +147,8 @@
             </ul>
         </div>
     </section>
+
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 </div>
