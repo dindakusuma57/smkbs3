@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .bg-scroll {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,7 +20,7 @@
   }
 
   .nav-link {
-    padding: 0.5rem 1rem; 
+    padding: 0.5rem 1rem;
     }
 
     .group-hover\:block {

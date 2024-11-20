@@ -33,7 +33,7 @@
     </section>
 
     {{-- gambar --}}
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10">
+    <section id="galeri" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             @foreach ($galeris as $galeri)
                 <div class="grid gap-4">

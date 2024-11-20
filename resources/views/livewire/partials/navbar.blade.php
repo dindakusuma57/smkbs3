@@ -51,9 +51,6 @@
                             <li>
                                 <a href="/visimisi" class="block px-4 py-2 hover:bg-gray-100">Visi Misi</a>
                             </li>
-                            <li>
-                                <a href="/guru" class="block px-4 py-2 hover:bg-gray-100">Guru</a>
-                            </li>
                         </ul>
                     </li>
 
@@ -72,7 +69,7 @@
                                 <a href="/kurikulum" class="block px-4 py-2 hover:bg-gray-100">Kurikulum</a>
                             </li>
                             <li>
-                                <a href="/ppdb" class="block px-4 py-2 hover:bg-gray-100">PPDB</a>
+                                <a href="/guru" class="block px-4 py-2 hover:bg-gray-100">Pengajar</a>
                             </li>
                         </ul>
                     </li>

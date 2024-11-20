@@ -21,7 +21,7 @@
     {{-- Hero End --}}
 
     {{-- Latest News --}}
-    <section>
+    <section id="newsupdate">
         <div class="mx-auto mt-8 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Berita Terbaru</h1>
             <p data-aos="fade-up"
@@ -58,7 +58,7 @@
     {{-- Latest news end --}}
 
     {{--  All berita --}}
-    <section class="mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <section id="news" class="mx-auto py-16 px-4 sm:px-6 lg:px-8">
 
         {{-- Category --}}
         <div class="flex space-x-2 mb-2 justify-between">

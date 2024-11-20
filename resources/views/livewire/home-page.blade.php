@@ -34,8 +34,8 @@
     </section>
     {{-- HERO END --}}
 
-    {{-- SERVICE START --}}
-    <section class="bg-gray-50 py-8 px-4" data-aos="fade-up">
+    {{-- Alasan START --}}
+    <section id="reason" class="bg-gray-50 py-8 px-4" data-aos="fade-up">
         <div class="container mx-auto text-center px-4">
             <h1 class="text-4xl font-bold text-[#16423C] mb-10">Kenapa SMK Bina Sejahtera 3?</h1>
             <div class="flex flex-wrap -mx-4 mt-4">
@@ -55,10 +55,10 @@
             </div>
         </div>
     </section>
-    {{-- SERVICE END --}}
+    {{-- Alasan END --}}
 
     {{-- ABOUT US SECTION --}}
-    <section class="relative overflow-hidden bg-gray-50">
+    <section id="about" class="relative overflow-hidden bg-gray-50">
         <div class="absolute top-0 right-0 bg-[#C4DAD2] w-full md:w-3/4 h-full"></div>
         <div class="relative container mx-auto py-16 px-4 sm:px-6 lg:px-8">
             @foreach ($tentangs as $tentang)
@@ -105,7 +105,7 @@
     {{-- STATISTIK END --}}
 
     {{-- TESTI START --}}
-    <section class="bg-gray-100 mt-10">
+    <section id="testi" class="bg-gray-100 mt-10">
         <div
             class="half-green-card mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">

@@ -17,9 +17,9 @@
                 <h4 class="text-lg text-white font-medium mb-7">SMK BS 3</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a href="/"  class="text-white hover:text-gray-900">Beranda</a></li>
-                    <li class="mb-6"><a href="javascript:;"  class=" text-white hover:text-gray-900">About</a></li>
-                    <li class="mb-6"><a href="javascript:;"  class=" text-white hover:text-gray-900">Pricing</a></li>
-                    <li><a href="javascript:;"  class=" text-white hover:text-gray-900">Features</a></li>
+                    <li class="mb-6"><a href="#reason"  class=" text-white hover:text-gray-900">Alasan</a></li>
+                    <li class="mb-6"><a href="#about"  class=" text-white hover:text-gray-900">Tentang</a></li>
+                    <li><a href="#testi"  class=" text-white hover:text-gray-900">Testimoni</a></li>
                 </ul>
             </div>
             <!--End Col-->
@@ -27,28 +27,28 @@
                 <h4 class="text-lg text-white font-medium mb-7">Profil</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a href="/sejarah"  class="text-white hover:text-gray-900">Sejarah</a></li>
-                    <li class="mb-6"><a href="/visimisi"  class=" text-white hover:text-gray-900">Visi Misi</a></li>
-                    <li class="mb-6"><a href="/guru"  class=" text-white hover:text-gray-900">Guru</a></li>
-                    <li><a href="javascript:;"  class=" text-white hover:text-gray-900">Components Library</a></li>
+                    <li class="mb-6"><a href="#visi"  class=" text-white hover:text-gray-900">Visi</a></li>
+                    <li class="mb-6"><a href="#misi"  class=" text-white hover:text-gray-900">Misi</a></li>
+                    <li><a href="#tujuan"  class=" text-white hover:text-gray-900">Tujuan</a></li>
                 </ul>
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left">
-                <h4 class="text-lg text-white font-medium mb-7">Resources</h4>
+                <h4 class="text-lg text-white font-medium mb-7">Pendidikan</h4>
                 <ul class="text-sm  transition-all duration-500">
-                    <li class="mb-6"><a href="javascript:;"  class="text-white hover:text-gray-900">FAQs</a></li>
-                    <li class="mb-6"><a href="javascript:;"  class=" text-white hover:text-gray-900">Quick Start</a></li>
-                    <li class="mb-6"><a href="javascript:;"  class=" text-white hover:text-gray-900">Documentation</a></li>
-                    <li><a href="javascript:;"  class=" text-white hover:text-gray-900">User Guide</a></li>
+                    <li class="mb-6"><a href="/guru"  class="text-white hover:text-gray-900">Pengajar</a></li>
+                    <li class="mb-6"><a href="/kurikulum"  class=" text-white hover:text-gray-900">Kurikulum</a></li>
+                    <li class="mb-6"><a href="/ppdb"  class=" text-white hover:text-gray-900">PPDB</a></li>
+                    <li><a href="/ekstrakulikuler"  class=" text-white hover:text-gray-900">Ekstrakulikuler</a></li>
                 </ul>
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left">
                 <h4 class="text-lg text-white font-medium mb-7">Blogs</h4>
                 <ul class="text-sm  transition-all duration-500">
-                    <li class="mb-6"><a href="javascript:;"  class="text-white hover:text-gray-900">News</a></li>
-                    <li class="mb-6"><a href="javascript:;"  class=" text-white hover:text-gray-900">Tips & Tricks</a></li>
-                    <li class="mb-6"><a href="javascript:;"  class=" text-white hover:text-gray-900">New Updates</a></li>
+                    <li class="mb-6"><a href="#newsupdate"  class="text-white hover:text-gray-900">Berita terbaru</a></li>
+                    <li class="mb-6"><a href="#news"  class=" text-white hover:text-gray-900">Berita</a></li>
+                    <li class="mb-6"><a href="#galeri"  class=" text-white hover:text-gray-900">Galeri</a></li>
                     <li><a href="javascript:;"  class=" text-white hover:text-gray-900">Events</a></li>
                 </ul>
             </div>

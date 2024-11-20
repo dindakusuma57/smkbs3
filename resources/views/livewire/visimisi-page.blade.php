@@ -20,7 +20,7 @@
     </section>
 
     {{-- Visi --}}
-    <section class="bg-gray-100">
+    <section id="visi" class="bg-gray-100">
         <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div class="max-w-lg">
@@ -44,7 +44,7 @@
     </section>
 
     {{-- Misi --}}
-    <section>
+    <section id="misi">
         <div class="bg-[#C4DAD2] px-2 py-10">
             <div id="features" class="mx-auto max-w-6xl text-center" data-aos="fade-up" data-aos-delay="5">
                 <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Misi</h1>
@@ -72,7 +72,7 @@
     </section>
 
     {{-- Tujuan --}}
-    <section>
+    <section id="tujuan">
         <div data-aos="fade-up"
             class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
             <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Tujuan</h1>
