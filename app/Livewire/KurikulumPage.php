@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\kurikulum;
 use Livewire\Attributes\Title;
 
-#[Title('Kurikulum - Yayasan Bina Sejahtera')]
+#[Title('Kurikulum - SMK Bina Sejahtera 3')]
 class KurikulumPage extends Component
 {
     public $kurikulums;

@@ -8,7 +8,7 @@ use Livewire\Component;
 use Livewire\Attributes\Title;
 use Livewire\WithPagination;
 
-#[Title('Guru - Yayasan Bina Sejahtera')]
+#[Title('Guru - SMK Bina Sejahtera 3')]
 class GuruPage extends Component
 {
     use WithPagination;

@@ -49,9 +49,9 @@
                             {{ Str::limit($recent->deskripsi, 150) }}....</p>
                         <div class="flex justify-between mb-2">
                             <span
-                                class="font-thin text-sm">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
+                                class="font-thin text-sm text-[#16423C]">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
                             <a href="{{ route('berita.show', $recent->slug) }}">
-                                <span class="sm:block hidden mb-2 text-[#16423C] font-bold">Read more ...</span>
+                                <span class="sm:block hidden mb-2 text-[#16423C] font-semibold">Baca Selengkapnya ...</span>
                             </a>
                         </div>
                     </div>
@@ -59,8 +59,6 @@
             @endforeach
         </div>
     </section>
-
-
     {{-- Latest news end --}}
 
     {{--  All berita --}}

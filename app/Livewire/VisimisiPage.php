@@ -6,7 +6,9 @@ use App\Models\visi;
 use App\Models\misi;
 use App\Models\tujuan;
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
+#[Title('VisiMisi - SMK Bina Sejahtera 3')]
 class VisimisiPage extends Component
 {
     public $visis;

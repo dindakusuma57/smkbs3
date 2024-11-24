@@ -33,14 +33,14 @@
     </section>
 
     {{-- gambar --}}
-    <section id="galeri" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <section id="galeri" class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-6 mb-4">
+        <div class="grid grid-cols-4 md:grid-cols-4 gap-2">
             @foreach ($galeris as $galeri)
-                <div class="grid gap-4">
+                <div class="flex justify-center items-center mb-6">
                     <div data-aos="fade-up">
                         <a href="{{ asset('storage/' . $galeri->image) }}" data-fancybox="gallery"
                             data-caption="{{ $galeri->judul }}">
-                            <img class="h-auto max-w-full rounded-lg"
+                            <img class="w-60 h-60 object-cover rounded-lg"
                                 src="{{ $galeri ? asset('storage/' . $galeri->image) : '' }}"
                                 alt="{{ $galeri->judul }}">
                         </a>
@@ -49,7 +49,7 @@
             @endforeach
         </div>
 
-        <div class="mt-8 flex justify-center">
+        <div class="mt-6 flex justify-center">
             <ul class="inline-flex items-center space-x-1">
                 @if ($galeris->onFirstPage())
                     <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">&laquo; Previous</li>
@@ -80,4 +80,5 @@
             </ul>
         </div>
     </section>
+
 </div>

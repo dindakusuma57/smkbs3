@@ -6,7 +6,7 @@ use App\Models\deskeskul;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 
-#[Title('Ekstrakulikuler - Yayasan Bina Sejahtera')]
+#[Title('Ekstrakulikuler - SMK Bina Sejahtera 3')]
 class EkskulPage extends Component
 {
     public $ekstrakulikulers;

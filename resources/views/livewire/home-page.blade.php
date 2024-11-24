@@ -14,6 +14,7 @@
     {{-- HERO START --}}
     <section class="bg-cover bg-center sm:bg-cover md:bg-cover lg:bg-center xl:bg-cover bg-gray-50"
         style="background-image: url('img/newhero.png'); background-size: cover; background-position: center;">
+        @foreach ($heroes as $hero )
         <div
             class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
@@ -22,8 +23,7 @@
                 <h1 class="mt-4 text-4xl font-bold leading-none sm:text-3xl md:text-4xl text-white">di SMK Bina
                     Sejahtera 3</h1>
                 <p class="mt-8 mb-8 text-lg sm:mb-12 text-white">
-                    Sekolah Impian bersama, kami wujudkan pendidikan yang komprehensif untuk menciptakan generasi
-                    berprestasi, berakhlakul mulia dan siap menyongsong masa depan
+                    {{$hero -> deskripsi}}
                 </p>
                 <div class="flex flex-col sm:items-center sm:justify-center sm:flex-row sm:space-x-4 lg:justify-start">
                     <a href="/ppdb"
@@ -32,6 +32,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </section>
     {{-- HERO END --}}
 

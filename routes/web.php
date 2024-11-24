@@ -13,10 +13,13 @@ use App\Livewire\KurikulumPage;
 use App\Livewire\PpdbPage;
 use App\Livewire\GaleriPage;
 use App\Livewire\DetailBeritaPage;
+use App\Models\Event;
 
 Route::get('/', HomePage::class);
 Route::get('/sejarah', SejarahPage::class);
+
 Route::get('/kalender', KalenderPage::class);
+
 Route::get('/visimisi', VisimisiPage::class);
 Route::get('/kontak', KontakPage::class);
 //Route::get('/berita', BeritaPage::class);

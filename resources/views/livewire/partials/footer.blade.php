@@ -8,7 +8,7 @@
                     <span class="mx-2 self-center text-xl font-semibold whitespace-nowrap dark:text-white" id="navbar-brand">SMK Bina Sejahtera 3</span>
                 </a>
                 <p class="py-8 text-sm text-white lg:max-w-xs text-center lg:text-left">Sekolah Impian bersama, kami wujudkan pendidikan yang komprehensif untuk menciptakan generasi berprestasi, berakhlakul mulia dan siap menyongsong masa depan</p>
-                <a href="javascript:;"  class="py-2.5 px-5 h-9 block w-fit bg-[#C4DAD2] rounded-full shadow-sm text-xs  text-[#116453] hover:text-white mx-auto transition-all  duration-500 hover:bg-[#116453] lg:mx-0">
+                <a href="javascript:;"  class="py-2.5 px-5 h-9 block w-fit bg-[#C4DAD2] rounded-full shadow-sm text-xs text-[#116453] hover:text-white mx-auto transition-all duration-500 hover:bg-[#116453] lg:mx-0">
                     Kontak Kami
                 </a>
             </div>

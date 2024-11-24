@@ -6,7 +6,9 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Berita;
 use App\Models\Category;
+use Livewire\Attributes\Title;
 
+#[Title('Berita - SMK Bina Sejahtera 3')]
 class BeritaPage extends Component
 {
     use WithPagination;

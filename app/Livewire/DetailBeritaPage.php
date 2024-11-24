@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Berita;
 use Livewire\Attributes\Title;
 
-#[Title('Detail Berita - Yayasan Bina Sejahtera')]
+#[Title('Detail Berita - SMK Bina Sejahtera 3')]
 
 class DetailBeritaPage extends Component
 {

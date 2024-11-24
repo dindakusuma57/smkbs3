@@ -12,7 +12,7 @@
                 class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
                 <h1 class="mt-8 text-4xl lg:text-4xl font-semibold">Sejarah</h1>
                 <h3 class="mt-4 text-lg font-semibold">
-                    <a href="/" class="text-white hover:underline">Beranda</a> &gt; <span>Sejarah</span>
+                    <a class="text-white hover:underline">Profil</a> &gt; <span>Sejarah</span>
                 </h3>
             </div>
         </div>

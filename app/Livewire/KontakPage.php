@@ -3,7 +3,9 @@
 namespace App\Livewire;
 use App\Models\kontak;
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
+#[Title('Kontak - SMK Bina Sejahtera 3')]
 class KontakPage extends Component
 {
     public $kontaks;

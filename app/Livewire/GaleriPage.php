@@ -7,7 +7,7 @@ use App\Models\galeri;
 use Livewire\Attributes\Title;
 use Livewire\WithPagination;
 
-#[Title('Galeri - Yayasan Bina Sejahtera')]
+#[Title('Galeri - SMK Bina Sejahtera 3')]
 
 class GaleriPage extends Component
 {

@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\ppdb;
 use Livewire\Attributes\Title;
 
-#[Title('PPDB - Yayasan Bina Sejahtera')]
+#[Title('PPDB - SMK Bina Sejahtera 3')]
 class PpdbPage extends Component
 {
     public $ppdbs;

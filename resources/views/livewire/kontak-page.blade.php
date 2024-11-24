@@ -22,7 +22,7 @@
             </div>
         </section>
 
-        <section class="py-10 px-4 sm:px-6 lg:px-8 mx-auto" style="background-color: #F3FFF4;">
+        <section class="py-10 px-4 sm:px-6 lg:px-8 mx-auto" style="background-color: white;">
             <section class="bg-white py-10 px-4 sm:px-6 lg:px-8">
                 <div style="margin-top:-140px; margin-bottom:-80px" data-aos="fade-up"
                     class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
@@ -114,7 +114,7 @@
         </section>
 
         {{-- Form Kontak --}}
-        <section class="" style="background-color: #F3FFF4;">
+        <section class="" style="background-color: white;">
             <div data-aos="fade-up" class="font-[sans-serif]">
                 <div class="bg-gradient-to-r bg-[#6A9C89] w-full h-36">
                     <div class="px-6 py-10 text-center" style="color:white">

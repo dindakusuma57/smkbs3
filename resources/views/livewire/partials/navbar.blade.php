@@ -37,7 +37,7 @@
                     <li class="relative">
                         <button onclick="toggleDropdown('profileDropdown')"
                             class="nav-link flex items-center text-white hover:text-gray-300 focus:outline-none">
-                            Profile
+                            Profil
                             <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
@@ -73,6 +73,9 @@
                             </li>
                             <li>
                                 <a href="/ekstrakulikuler" class="block px-4 py-2 hover:bg-gray-100">Ekstrakulikuler</a>
+                            </li>
+                            <li>
+                                <a href="/kalender" class="block px-4 py-2 hover:bg-gray-100">Kalender</a>
                             </li>
                         </ul>
                     </li>

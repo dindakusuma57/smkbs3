@@ -4,7 +4,9 @@ namespace App\Livewire;
 
 use App\Models\sejarah;
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
+#[Title('Sejarah - SMK Bina Sejahtera 3')]
 class SejarahPage extends Component
 {
     public $sejarahs;
