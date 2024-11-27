@@ -18,7 +18,7 @@ use App\Models\Event;
 Route::get('/', HomePage::class);
 Route::get('/sejarah', SejarahPage::class);
 
-Route::get('/kalender', KalenderPage::class);
+Route::get('/kalender', KalenderPage::class)->name('kalender');
 
 Route::get('/visimisi', VisimisiPage::class);
 Route::get('/kontak', KontakPage::class);

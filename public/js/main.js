@@ -153,6 +153,62 @@ window.addEventListener("scroll", () => {
 })
 
 
+//category berita
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const beritaItems = document.querySelectorAll('.berita-item');
+    const allCategoryButton = document.querySelector('[onclick="selectCategory(\'all\')"]');
+
+    function selectCategory(categoryId) {
+        categoryButtons.forEach(button => {
+            if (button.getAttribute('data-category-id') == categoryId) {
+                button.classList.add('bg-[#16423C]', 'text-white');
+                button.classList.remove('bg-[#7d7e7e]');
+            } else {
+                button.classList.remove('bg-[#16423C]', 'text-white');
+                button.classList.add('bg-[#7d7e7e]');
+            }
+        });
+
+        beritaItems.forEach(item => {
+            const itemCategoryId = item.getAttribute('data-category-id');
+            if (categoryId === 'all' || itemCategoryId == categoryId) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (categoryId === 'all') {
+            allCategoryButton.classList.add('bg-[#16423C]', 'text-white');
+            allCategoryButton.classList.remove('bg-[#7d7e7e]');
+        } else {
+            allCategoryButton.classList.remove('bg-[#16423C]', 'text-white');
+            allCategoryButton.classList.add('bg-[#7d7e7e]');
+        }
+    }
+
+    if (allCategoryButton) {
+        selectCategory('all');
+    }
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const categoryId = button.getAttribute('data-category-id');
+            selectCategory(categoryId);
+        });
+    });
+
+    if (allCategoryButton) {
+        allCategoryButton.addEventListener('click', function () {
+            selectCategory('all');
+        });
+    }
+});
+
+
+
+
 
 
 

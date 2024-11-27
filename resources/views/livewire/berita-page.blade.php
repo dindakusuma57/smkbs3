@@ -51,7 +51,8 @@
                             <span
                                 class="font-thin text-sm text-[#16423C]">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
                             <a href="{{ route('berita.show', $recent->slug) }}">
-                                <span class="sm:block hidden mb-2 text-[#16423C] font-semibold">Baca Selengkapnya ...</span>
+                                <span class="sm:block hidden mb-2 text-[#16423C] font-semibold">Baca Selengkapnya
+                                    ...</span>
                             </a>
                         </div>
                     </div>
@@ -71,21 +72,20 @@
             </h1>
 
             <div>
-                <span wire:click="selectCategory(null)"
-                    class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }}
-                    text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
+                <span onclick="selectCategory('all')"
+                    class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                     Semua
                 </span>
 
+
                 @foreach ($categories as $category)
-                    <span wire:click="selectCategory({{ $category->id }})"
-                        class="mx-2 cursor-pointer {{ $selectedCategory === $category->id ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }}
-                        text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
+                    <button onclick="selectCategory({{ $category->id }})"
+                        class="category-button {{ $selectedCategory === $category->id ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white"
+                        data-category-id="{{ $category->id }}">
                         {{ $category->judul }}
-                    </span>
+                    </button>
                 @endforeach
             </div>
-
         </div>
         {{-- Category End --}}
 
@@ -96,7 +96,8 @@
                     $images = is_array($berita->image) ? $berita->image : explode(',', $berita->image);
                 @endphp
 
-                <a href="{{ route('berita.show', $berita->slug) }}">
+                <a href="{{ route('berita.show', $berita->slug) }}" class="block berita-item"
+                    data-category-id="{{ $berita->category_id }}">
                     <div
                         class="bg-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105 flex flex-col h-full">
                         <img class="rounded-lg mb-4 w-full h-48 object-cover"
@@ -108,7 +109,6 @@
                             class="text-xs text-gray-600 mt-auto">{{ \Carbon\Carbon::parse($berita->created_at)->format('d-m-Y') }}</span>
                     </div>
                 </a>
-
             @empty
                 <p class="col-span-3 text-center text-gray-500">Tidak ada berita ditemukan.</p>
             @endforelse

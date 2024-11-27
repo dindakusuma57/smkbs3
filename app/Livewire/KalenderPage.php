@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Livewire;
-use App\Models\event;
+
+use App\Models\Event;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 
@@ -17,7 +18,11 @@ class KalenderPage extends Component
 
     public function render()
     {
+        $events = Event::all();
 
-        return view('livewire.kalender-page');
+        return view('livewire.kalender-page', [
+            'events' => $events, // Pastikan variabel ini dipetakan dengan benar
+        ]);
     }
 }
+
