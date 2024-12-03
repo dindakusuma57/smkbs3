@@ -1,3 +1,6 @@
+//animation
+AOS.init();
+
 // Statistik
 document.addEventListener('DOMContentLoaded', () => {
     new PureCounter();
@@ -6,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Body
 document.body.style.overflowX = 'hidden';
 
-// Function to change image source dynamically
 function changeImage(src) {
     document.getElementById('mainImage').src = src;
 }
@@ -15,33 +17,35 @@ function changeImage(src) {
 import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const keenSlider = new KeenSlider(
-        '#keen-slider',
-        {
-            loop: true,
-            slides: {
-                origin: 'center',
-                perView: 1.25,
-                spacing: 16,
-            },
-            breakpoints: {
-                '(min-width: 1024px)': {
-                    slides: {
-                        origin: 'auto',
-                        perView: 1.5,
-                        spacing: 32,
-                    },
+    const sliderElement = document.querySelector('#keen-slider');
+    if (!sliderElement) {
+        console.error("Element with ID 'keen-slider' not found.");
+        return;
+    }
+
+    const keenSlider = new KeenSlider(sliderElement, {
+        loop: true,
+        slides: {
+            origin: 'center',
+            perView: 1.25,
+            spacing: 16,
+        },
+        breakpoints: {
+            '(min-width: 1024px)': {
+                slides: {
+                    origin: 'auto',
+                    perView: 1.5,
+                    spacing: 32,
                 },
             },
         },
-        []
-    );
+    });
 
-    const keenSliderPrevious = document.getElementById('keen-slider-previous');
-    const keenSliderNext = document.getElementById('keen-slider-next');
-
-    const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop');
-    const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop');
+    // Ensure the elements exist before attaching event listeners
+    const keenSliderPrevious = document.querySelector('#keen-slider-previous');
+    const keenSliderNext = document.querySelector('#keen-slider-next');
+    const keenSliderPreviousDesktop = document.querySelector('#keen-slider-previous-desktop');
+    const keenSliderNextDesktop = document.querySelector('#keen-slider-next-desktop');
 
     if (keenSliderPrevious) {
         keenSliderPrevious.addEventListener('click', () => keenSlider.prev());
@@ -57,25 +61,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
 //NAVBAR
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const ctaButton = document.getElementById('cta-button');
 const navbarBrand = document.getElementById('navbar-brand');
+const kontakLink = document.getElementById('kontak-link');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('bg-white', 'shadow-md');
-        navLinks.forEach(link => link.style.color = '#16423C');
-        navbarBrand.style.color = '#16423C';
-        ctaButton.style.color = '#16423C';
+        navLinks.forEach(link => {
+            if (link !== kontakLink) { // Jika link bukan menu kontak
+                link.style.color = '#16423C';
+            }
+        });
+        kontakLink.style.color = 'white'; // Tetap putih untuk menu kontak
+        navbarBrand.style.color = '#16423C'; // Warna hijau untuk teks SMK Bina Sejahtera 3
+        ctaButton.style.color = '#16423C'; // Warna hijau untuk CTA button
     } else {
         navbar.classList.remove('bg-white', 'shadow-md');
         navLinks.forEach(link => link.style.color = 'white');
-        navbarBrand.style.color = 'white';
-        ctaButton.style.color = 'white';
+        navbarBrand.style.color = 'white'; // Warna putih untuk teks saat di atas scroll
+        ctaButton.style.color = 'white'; // Warna putih untuk CTA button saat di atas scroll
     }
 });
+
 
 //Kirim pesan
 document.addEventListener("DOMContentLoaded", function () {
@@ -159,6 +171,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const beritaItems = document.querySelectorAll('.berita-item');
     const allCategoryButton = document.querySelector('[onclick="selectCategory(\'all\')"]');
 
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+    }
+
     function selectCategory(categoryId) {
         categoryButtons.forEach(button => {
             if (button.getAttribute('data-category-id') == categoryId) {
@@ -181,14 +198,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (categoryId === 'all') {
             allCategoryButton.classList.add('bg-[#16423C]', 'text-white');
-            allCategoryButton.classList.remove('bg-[#7d7e7e]');
         } else {
-            allCategoryButton.classList.remove('bg-[#16423C]', 'text-white');
+            allCategoryButton.classList.remove('text-white');
             allCategoryButton.classList.add('bg-[#7d7e7e]');
         }
     }
 
     if (allCategoryButton) {
+        allCategoryButton.classList.add('bg-[#C4DAD2]');
         selectCategory('all');
     }
 
@@ -205,6 +222,67 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+//Calendar
+document.addEventListener('livewire:initialized', function () {
+    const calendarEl = document.getElementById('calendar');
+    const events = JSON.parse(calendarEl.getAttribute('data-events'));
+
+    const isMobile = window.innerWidth < 768;
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: isMobile ? 'timeGridDay' : 'dayGridMonth',
+        timeZone: 'local',
+        events: events,
+        headerToolbar: isMobile
+            ? {
+                  left: 'prev,next',
+                  center: '',
+                  right: 'timeGridDay,timeGridWeek',
+              }
+            : {
+                  left: 'prev,next today',
+                  center: 'title',
+                  right: 'dayGridMonth,timeGridWeek,timeGridDay',
+              },
+        contentHeight: 'auto',
+        aspectRatio: isMobile ? 0.8 : 1.5,
+        displayEventTime: false,
+        eventColor: function (info) {
+            return info.event.extendedProps.color;
+        },
+    });
+
+    calendar.render();
+
+    window.addEventListener('resize', function () {
+        const currentIsMobile = window.innerWidth < 768;
+
+        if (currentIsMobile !== isMobile) {
+            calendar.setOption('headerToolbar', currentIsMobile
+                ? {
+                      left: 'prev,next',
+                      center: '',
+                      right: 'timeGridDay,timeGridWeek',
+                  }
+                : {
+                      left: 'prev,next today',
+                      center: 'title',
+                      right: 'dayGridMonth,timeGridWeek,timeGridDay',
+                  }
+            );
+
+            calendar.changeView(currentIsMobile ? 'timeGridDay' : 'dayGridMonth');
+        }
+    });
+});
+
+
+
+
+
+
+
 
 
 

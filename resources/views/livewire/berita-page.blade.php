@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="css/filament/style.css">
 <script type="module" src="js/main.js"></script>
 <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 <div>
     {{-- Hero Start --}}
@@ -38,21 +36,22 @@
                 @endphp
 
                 <div data-aos="zoom-out"
-                    class="mt-8 sm:flex items-center shadow-md bg-white rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
-                    <div class="flex-1">
+                    class="mt-8 flex flex-col sm:flex-row items-center shadow-md bg-white rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <div class="flex-1 mb-4 sm:mb-0 sm:w-1/2">
                         <img class="bg-cover rounded-lg w-full h-auto" src="{{ asset('storage/' . trim($images[0])) }}"
                             alt="" />
                     </div>
-                    <div class="flex-1 md:px-10 sm:px-5">
+                    <div class="flex-1 sm:px-10 sm:w-1/2">
                         <h1 class="text-[#16423C] font-bold text-2xl sm:text-3xl my-2">{{ $recent->judul }}</h1>
                         <p class="text-[#16423C] mb-2 md:mb-6 text-base sm:text-lg">
-                            {{ Str::limit($recent->deskripsi, 150) }}....</p>
+                            {{ Str::limit($recent->deskripsi, 150) }}....
+                        </p>
                         <div class="flex justify-between mb-2">
                             <span
                                 class="font-thin text-sm text-[#16423C]">{{ \Carbon\Carbon::parse($recent->created_at)->format('d-m-Y') }}</span>
                             <a href="{{ route('berita.show', $recent->slug) }}">
-                                <span class="sm:block hidden mb-2 text-[#16423C] font-semibold">Baca Selengkapnya
-                                    ...</span>
+                                <span class="block sm:hidden mb-2 text-[#16423C] font-semibold">Baca Selengkapnya ...</span>
+                                <span class="hidden sm:block mb-2 text-[#16423C] font-semibold">Baca Selengkapnya ...</span>
                             </a>
                         </div>
                     </div>
@@ -60,13 +59,14 @@
             @endforeach
         </div>
     </section>
+
     {{-- Latest news end --}}
 
     {{--  All berita --}}
     <section id="news" class="mx-auto py-16 px-4 sm:px-6 lg:px-8">
 
         {{-- Category --}}
-        <div class="flex space-x-2 mb-2 justify-between">
+        <div class="flex flex-col sm:flex-row space-x-2 mb-2 justify-between">
             <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl mb-6" data-aos="fade-up">
                 Berita
             </h1>
@@ -76,8 +76,6 @@
                     class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                     Semua
                 </span>
-
-
                 @foreach ($categories as $category)
                     <button onclick="selectCategory({{ $category->id }})"
                         class="category-button {{ $selectedCategory === $category->id ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white"
@@ -117,11 +115,11 @@
         <div class="mt-8 flex justify-center">
             <ul class="inline-flex items-center space-x-1">
                 @if ($beritas->onFirstPage())
-                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">&laquo; Previous</li>
+                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Previous</li>
                 @else
                     <li>
                         <a href="{{ $beritas->previousPageUrl() }}"
-                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">&laquo; Previous</a>
+                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Previous</a>
                     </li>
                 @endif
 
@@ -137,10 +135,10 @@
                 @if ($beritas->hasMorePages())
                     <li>
                         <a href="{{ $beritas->nextPageUrl() }}"
-                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next &raquo;</a>
+                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next</a>
                     </li>
                 @else
-                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Next &raquo;</li>
+                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Next</li>
                 @endif
             </ul>
         </div>

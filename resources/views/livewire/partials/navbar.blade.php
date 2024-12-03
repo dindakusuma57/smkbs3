@@ -1,20 +1,18 @@
-<link rel="stylesheet" href="css/filament/style.css">
-<script type="module" src="js/main.js"></script>
+<link rel="stylesheet" href="{{ asset('css/filament/style.css') }}">
+<script type="module" src="{{ asset('js/main.js') }}"></script>
 
 <div>
     <nav id="navbar" class="navbar fixed top-0 left-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-3 py-2">
-            <!-- Brand -->
             <a href="/" class="flex items-center space-x-2">
                 <img src="{{ asset('img/logo.png') }}" class="h-8" alt="Flowbite Logo" />
                 <span id="navbar-brand" class="self-center text-lg font-semibold text-white">SMK Bina Sejahtera 3</span>
             </a>
 
-            <!-- Action Buttons -->
             <div class="flex items-center md:order-2 space-x-2">
                 <a href="/kontak">
                     <button type="button" id="cta-button"
-                        class="shadow-md text-white bg-[#16423C] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md px-4 py-2 text-center">
+                        class="shadow-lg text-white bg-[#16423C] hover:bg-[#C4DAD2] hover:text-[#16423C] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md px-4 py-2 text-center">
                         Kontak
                     </button>
                 </a>
@@ -90,9 +88,3 @@
 
 </div>
 
-<script>
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('hidden');
-    }
-</script>

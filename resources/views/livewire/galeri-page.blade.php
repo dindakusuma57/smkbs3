@@ -2,9 +2,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 <div>
     <section class="bg-white">
@@ -12,7 +9,7 @@
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
             <div
                 class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
-                <h1 class="mt-8 text-4xl lg:text-4xl font-semibold">Galeri</h1>
+                <h1 class="mt-8 text-4xl lg:text-5xl font-semibold">Galeri</h1>
                 <h3 class="mt-4 text-lg font-semibold">
                     <a href="#" class="text-white hover:underline">Beranda</a> &gt; <span>Galeri</span>
                 </h3>
@@ -22,7 +19,7 @@
 
     {{-- Keterangan Galeri --}}
     <section>
-        <div class="max-w-5xl mt-8 mx-auto  text-center mb-10 lg:mb-10">
+        <div class="max-w-5xl mt-8 mx-auto text-center mb-10 lg:mb-10">
             <h1 data-aos="fade-up" class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Galeri
             </h1>
             <p data-aos="fade-up"
@@ -34,12 +31,12 @@
 
     {{-- gambar --}}
     <section id="galeri" class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-6 mb-4">
-        <div class="grid grid-cols-4 md:grid-cols-4 gap-2">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             @foreach ($galeris as $galeri)
                 <div class="flex justify-center items-center mb-6">
                     <div data-aos="fade-up">
-                        <a href="{{ asset('storage/' . $galeri->image) }}" data-fancybox="gallery"
-                            data-caption="{{ $galeri->judul }}">
+                        <a href="{{ asset('storage/' . $galeri->image) }}" data-fancybox="gallery" data-caption="{{ $galeri->judul }}">
+                            <!-- Menentukan ukuran gambar secara eksplisit -->
                             <img class="w-60 h-60 object-cover rounded-lg"
                                 src="{{ $galeri ? asset('storage/' . $galeri->image) : '' }}"
                                 alt="{{ $galeri->judul }}">
@@ -80,5 +77,4 @@
             </ul>
         </div>
     </section>
-
 </div>

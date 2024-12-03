@@ -1,8 +1,5 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 <div>
     {{-- HERO --}}
@@ -46,19 +43,19 @@
 
     <!-- Team -->
     <section>
-        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14" data-aos="fade-up">
                 <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl">Guru - guru</h1>
-                <p
-                    class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
+                <p class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
                     SMK Bina Sejahtera 3
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-aos="zoom-in">
+            <!-- Grid untuk Team -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-aos="zoom-in">
                 @foreach ($pengajars as $pengajar)
                     <div class="text-center mt-4">
-                        <img class="rounded-xl sm:size-48 lg:size-60 mx-auto shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
+                        <img class="rounded-xl sm:size-48 lg:size-60 mx-auto shadow-md transition-transform transform hover:scale-105 hover:shadow-lg w-full"
                             src="{{ $pengajar ? asset('storage/' . $pengajar->image) : asset('storage/default-avatar.jpg') }}"
                             alt="Avatar">
                         <div class="mt-2 sm:mt-4">
@@ -73,14 +70,15 @@
                 @endforeach
             </div>
 
+            <!-- Pagination -->
             <div class="mt-8 flex justify-center">
                 <ul class="inline-flex items-center space-x-1">
                     @if ($pengajars->onFirstPage())
-                        <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">&laquo; Previous</li>
+                        <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Previous</li>
                     @else
                         <li>
                             <a href="{{ $pengajars->previousPageUrl() }}"
-                                class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">&laquo;
+                                class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">
                                 Previous</a>
                         </li>
                     @endif
@@ -97,15 +95,14 @@
                     @if ($pengajars->hasMorePages())
                         <li>
                             <a href="{{ $pengajars->nextPageUrl() }}"
-                                class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next &raquo;</a>
+                                class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next</a>
                         </li>
                     @else
-                        <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Next &raquo;</li>
+                        <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Next</li>
                     @endif
                 </ul>
             </div>
-
         </div>
-        <!-- End Team -->
     </section>
+
 </div>

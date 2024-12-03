@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="css/filament/style.css">
 <script type="module" src="js/main.js"></script>
 <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 <div>
     {{-- header section --}}
@@ -86,7 +84,7 @@
         {{-- ekskul list --}}
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <!-- Title -->
-            <div class="max-w-2xl mx-auto text-center ">
+            <div class="max-w-2xl mx-auto text-center">
                 <h1 class="text-3xl font-extrabold text-[#16423C] sm:text-4xl" data-aos="fade-up">Ekstrakulikuler</h1>
                 <p data-aos="fade-up"
                     class="font-medium sm:text-2xl text-[#16423C] mt-2 text-center text-base leading-7 inline-block border-b-4 border-[#6A9C89] pb-2">
@@ -96,7 +94,7 @@
             <!-- End Title -->
 
             <!-- Grid -->
-            <div class="mt-4 grid grid-cols-3 gap-8 md:gap-12">
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                 @foreach ($ekstrakulikulers as $ekstrakulikuler)
                     <div data-aos="fade-up" data-aos-delay="50"
                         class="relative mx-auto mt-2 sm:mt-4 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
@@ -104,9 +102,7 @@
                             <img class="object-cover w-full h-full"
                                 src="{{ $ekstrakulikuler ? asset('storage/' . $ekstrakulikuler->image) : '' }}"
                                 alt="product image" />
-                            <div
-                                class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-80">
-                            </div>
+                            <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-80"></div>
 
                             <a href="{{ $ekstrakulikuler->deskripsi }}"
                                 class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -125,6 +121,7 @@
             </div>
         </div>
     </section>
+
 
     <a href="#" class="to-top">
         <i class="fas fa-chevron-up"></i>

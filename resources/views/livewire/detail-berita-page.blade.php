@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/filament/style.css">
 <script type="module" src="js/main.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -5,18 +6,18 @@
     AOS.init();
 </script>
 
-
 <div>
     {{-- Hero --}}
     <section class="bg-white">
-        <div class="relative w-full bg-cover bg-center" style="background-image: url('{{ asset('img/landing2.jpeg') }}');">
+        <div class="relative w-full bg-cover bg-center"
+            style="background-image: url('{{ asset('img/landing2.jpeg') }}');">
             <div class="absolute inset-0 bg-[#16423C] opacity-90"></div>
             <div
-                class="relative max-w-5xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
-                <h1 class="mt-8 text-= lg:text-4xl font-semibold">{{ $berita->judul }}</h1>
-                <h3 class="mt-4 text-lg font-semibold">
-                    <a href="/berita"
-                            class="text-white hover:underline">Berita</a> &gt; </span><span>{{ $berita->slug }}</span>
+                class="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-12 text-white text-center flex flex-col items-center justify-center">
+                <h1 class="mt-8 text-lg sm:text-3xl lg:text-4xl font-semibold">{{ $berita->judul }}</h1>
+                <h3 class="mt-4 text-sm sm:text-lg font-semibold">
+                    <a href="/berita" class="text-white hover:underline">Berita</a> &gt;
+                    </span><span>{{ $berita->slug }}</span>
                 </h3>
             </div>
         </div>
@@ -24,20 +25,20 @@
 
     {{-- Berita utama --}}
     <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <div class="col-span-2 space-y-8">
+            <div class="col-span-1 sm:col-span-2 space-y-8">
                 <div class="space-y-4" data-aos="fade-up">
                     {{-- Gambar --}}
-                    <div data-aos="zoom-out" class="w-full md:w-1/2 px-4 mb-8">
+                    <div data-aos="zoom-out" class="w-full mb-8">
                         @php
                             $images = is_array($berita->image) ? $berita->image : explode(',', $berita->image);
                         @endphp
 
                         {{-- Gambar Utama --}}
                         <img src="{{ asset('storage/' . $images[0]) }}" alt="{{ $berita->judul }}"
-                            class="aspect-video overflow-hidden rounded-xl object-cover" id="mainImage"
-                            style="max-width: 800px; height: 450px;">
+                            class="aspect-video overflow-hidden rounded-xl object-cover w-full"
+                            id="mainImage" style="max-width: 800px; height: 450px;">
 
                         {{-- Thumbnail Gambar --}}
                         <div class="flex gap-4 py-4 justify-center overflow-x-auto">
@@ -48,9 +49,10 @@
                             @endforeach
                         </div>
                     </div>
+
                     <div data-aos="fade-up" class="space-y-4">
                         <h1
-                            class="text-[#16423C] text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                            class="text-[#16423C] text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter">
                             {{ $berita->judul }}
                         </h1>
                         <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
@@ -66,8 +68,7 @@
                 </div>
             </div>
 
-
-            {{-- berita terbaru --}}
+            {{-- Berita terbaru --}}
             <div data-aos="fade-up" class="space-y-6 px-8">
                 <div class="bg-white p-6 shadow-md rounded-lg px-8">
                     <h3 class="text-lg font-semibold text-[#16423C]">Cari Berita</h3>
@@ -103,7 +104,6 @@
                         @endforeach
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

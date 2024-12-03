@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+
+body, html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 .bg-scroll {
     background-color: rgba(255, 255, 255, 1);
@@ -77,3 +79,27 @@ dd {
         opacity: 1;
     }
 }
+
+.fc-header-toolbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .fc-header-toolbar {
+        flex-direction: column;
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+

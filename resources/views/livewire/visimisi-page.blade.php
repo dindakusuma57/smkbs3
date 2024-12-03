@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="css/filament/style.css">
 <script type="module" src="js/main.js"></script>
 <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 <div>
     {{-- hero --}}
