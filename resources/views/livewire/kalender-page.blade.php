@@ -1,7 +1,10 @@
+<link rel="stylesheet" href="{{ asset('/css/filament/style.css') }}">
+<script type="module" src="{{ asset('js/main.js') }}"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
-<script type="module" src="js/main.js"></script>
 
 <div>
     <!-- Section Header -->

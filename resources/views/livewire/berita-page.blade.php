@@ -73,12 +73,12 @@
 
             <div>
                 <span onclick="selectCategory('all')"
-                    class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
+                    class="mx-2 cursor-pointer {{ is_null($selectedCategory) ? 'bg-[#16423C] text-white' : 'bg-[#010101] text-[#6dd36d]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white">
                     Semua
                 </span>
                 @foreach ($categories as $category)
                     <button onclick="selectCategory({{ $category->id }})"
-                        class="category-button {{ $selectedCategory === $category->id ? 'bg-[#16423C] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white"
+                        class="category-button {{ $selectedCategory === $category->id ? 'bg-[#e5fffc] text-white' : 'bg-[#C4DAD2] text-[#002500]' }} text-sm font-semibold px-5 py-1 rounded-full hover:bg-[#16423C] hover:text-white"
                         data-category-id="{{ $category->id }}">
                         {{ $category->judul }}
                     </button>

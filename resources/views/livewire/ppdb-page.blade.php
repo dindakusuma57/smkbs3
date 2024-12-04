@@ -33,7 +33,7 @@
                 </div>
 
                 <p data-aos="fade-up" data-aos-delay="50"
-                    class="font-medium text-[#16423C] mt-4 text-justify text-base">
+                    class="font-medium text-[#16423C] mt-4 text-justify text-base px-4 sm:px-6 lg:px-8">
                     {{ $ppdb->deskripsi }}
                 </p>
             </div>

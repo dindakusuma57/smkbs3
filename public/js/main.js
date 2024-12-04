@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // Ensure the elements exist before attaching event listeners
     const keenSliderPrevious = document.querySelector('#keen-slider-previous');
     const keenSliderNext = document.querySelector('#keen-slider-next');
     const keenSliderPreviousDesktop = document.querySelector('#keen-slider-previous-desktop');
@@ -70,21 +69,22 @@ const navbarBrand = document.getElementById('navbar-brand');
 const kontakLink = document.getElementById('kontak-link');
 
 window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
     if (window.scrollY > 50) {
         navbar.classList.add('bg-white', 'shadow-md');
         navLinks.forEach(link => {
-            if (link !== kontakLink) { // Jika link bukan menu kontak
+            if (link !== kontakLink) {
                 link.style.color = '#16423C';
             }
         });
-        kontakLink.style.color = 'white'; // Tetap putih untuk menu kontak
-        navbarBrand.style.color = '#16423C'; // Warna hijau untuk teks SMK Bina Sejahtera 3
-        ctaButton.style.color = '#16423C'; // Warna hijau untuk CTA button
+        kontakLink.style.color = 'white';
+        navbarBrand.style.color = '#16423C';
+        ctaButton.style.color = '#16423C';
     } else {
         navbar.classList.remove('bg-white', 'shadow-md');
         navLinks.forEach(link => link.style.color = 'white');
-        navbarBrand.style.color = 'white'; // Warna putih untuk teks saat di atas scroll
-        ctaButton.style.color = 'white'; // Warna putih untuk CTA button saat di atas scroll
+        navbarBrand.style.color = 'white';
+        ctaButton.style.color = 'white';
     }
 });
 
@@ -276,6 +276,7 @@ document.addEventListener('livewire:initialized', function () {
         }
     });
 });
+
 
 
 
