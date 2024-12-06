@@ -35,9 +35,9 @@
             @foreach ($galeris as $galeri)
                 <div class="flex justify-center items-center mb-6">
                     <div data-aos="fade-up">
-                        <a href="{{ asset('storage/' . $galeri->image) }}" data-fancybox="gallery" data-caption="{{ $galeri->judul }}">
-                            <!-- Menentukan ukuran gambar secara eksplisit -->
-                            <img class="w-60 h-60 object-cover rounded-lg"
+                        <a href="{{ asset('storage/' . $galeri->image) }}" data-fancybox="gallery"
+                            data-caption="{{ $galeri->judul }}">
+                            <img class="w-60 h-60 object-cover rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
                                 src="{{ $galeri ? asset('storage/' . $galeri->image) : '' }}"
                                 alt="{{ $galeri->judul }}">
                         </a>
@@ -46,21 +46,22 @@
             @endforeach
         </div>
 
+        {{-- pagination --}}
         <div class="mt-6 flex justify-center">
             <ul class="inline-flex items-center space-x-1">
                 @if ($galeris->onFirstPage())
-                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">&laquo; Previous</li>
+                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Previous</li>
                 @else
                     <li>
                         <a href="{{ $galeris->previousPageUrl() }}"
-                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">&laquo; Previous</a>
+                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Previous</a>
                     </li>
                 @endif
 
                 @foreach ($galeris->getUrlRange(1, $galeris->lastPage()) as $page => $url)
                     <li>
                         <a href="{{ $url }}"
-                            class="{{ $page == $galeris->currentPage() ? 'bg-[#16423C] text-white' : 'bg-[#6A9C89] text-white' }} px-3 py-1 rounded-md hover:bg-[#5e8b7d]">
+                            class=" {{ $page == $galeris->currentPage() ? 'bg-[#16423C] text-white' : 'bg-[#6A9C89] text-white' }} px-3 py-1 rounded-md hover:bg-[#5e8b7d]">
                             {{ $page }}
                         </a>
                     </li>
@@ -69,10 +70,10 @@
                 @if ($galeris->hasMorePages())
                     <li>
                         <a href="{{ $galeris->nextPageUrl() }}"
-                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next &raquo;</a>
+                            class="px-3 py-1 rounded-md bg-[#6A9C89] text-white hover:bg-[#5e8b7d]">Next</a>
                     </li>
                 @else
-                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Next &raquo;</li>
+                    <li class="text-gray-500 px-3 py-1 rounded-md cursor-not-allowed">Nex</li>
                 @endif
             </ul>
         </div>

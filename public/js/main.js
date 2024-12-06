@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarBrand = document.getElementById('navbarBrand');
     const kontakLink = document.getElementById('kontak-link');
 
-    window.addEventListener('scroll', function ()  {
+    window.addEventListener('scroll', function () {
         const navbar = document.querySelector(".navbar");
         console.log(window.scrollY);
         if (window.scrollY > 50) {
@@ -99,15 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//Toggle navbar
-document.addEventListener('DOMContentLoaded', () => {
-    // Toggle dropdown function
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('hidden');
-    }
+//dropdown navbar
 
-    // Navbar toggle button functionality
+
+//toggle navbar
+document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.querySelector('[data-collapse-toggle="navbar-cta"]');
     const navbar = document.getElementById('navbar');
     const navbarMenu = document.getElementById('navbar-cta');
@@ -125,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
 
 //Kirim pesan
 document.addEventListener("DOMContentLoaded", function () {
@@ -258,15 +253,15 @@ document.addEventListener('livewire:initialized', function () {
         events: events,
         headerToolbar: isMobile
             ? {
-                  left: 'prev,next',
-                  center: '',
-                  right: 'timeGridDay,timeGridWeek',
-              }
+                left: 'prev,next',
+                center: '',
+                right: 'timeGridDay,timeGridWeek',
+            }
             : {
-                  left: 'prev,next today',
-                  center: 'title',
-                  right: 'dayGridMonth,timeGridWeek,timeGridDay',
-              },
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay',
+            },
         contentHeight: 'auto',
         aspectRatio: isMobile ? 0.8 : 1.5,
         displayEventTime: false,
@@ -283,15 +278,15 @@ document.addEventListener('livewire:initialized', function () {
         if (currentIsMobile !== isMobile) {
             calendar.setOption('headerToolbar', currentIsMobile
                 ? {
-                      left: 'prev,next',
-                      center: '',
-                      right: 'timeGridDay,timeGridWeek',
-                  }
+                    left: 'prev,next',
+                    center: '',
+                    right: 'timeGridDay,timeGridWeek',
+                }
                 : {
-                      left: 'prev,next today',
-                      center: 'title',
-                      right: 'dayGridMonth,timeGridWeek,timeGridDay',
-                  }
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay',
+                }
             );
 
             calendar.changeView(currentIsMobile ? 'timeGridDay' : 'dayGridMonth');

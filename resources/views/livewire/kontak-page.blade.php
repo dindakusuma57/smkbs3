@@ -4,8 +4,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    @livewireStyles
-
     <div>
         <section class="bg-white">
             <div class="relative w-full bg-cover bg-center" style="background-image: url('img/landing2.jpeg');">
@@ -20,17 +18,17 @@
             </div>
         </section>
 
-        <section class="py-10 px-4 sm:px-6 lg:px-8 mx-auto" style="background-color: white;">
-            <section class="bg-white py-10 px-4 sm:px-6 lg:px-8">
+        <section class="py-5 px-4 sm:px-6 lg:px-8 mx-auto" style="background-color: white;">
+            <section class="bg-white mb-8 py-5 px-4 sm:px-6 lg:px-8">
                 <div style="margin-top:-140px; margin-bottom:-80px" data-aos="fade-up"
-                    class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+                    class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-10 lg:px-8">
                     <div class="mt-16 lg:mt-20">
                         @foreach ($kontaks as $kontak)
                             <div class="grid grid-cols-1 md:grid-cols-2">
                                 <div class="rounded-sm overflow-hidden">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6149752394385!2d106.74054647362662!3d-6.570182193423148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c57a0fb2730f%3A0x4147e5cc562f6ba6!2sSMK%20Bina%20Sejahtera%203%20Kota%20Bogor!5e0!3m2!1sen!2sid!4v1729242450185!5m2!1sen!2sid"
-                                        width="100%" height="450" style="border:0;" allowfullscreen=""
+                                        width="100%" height="500" style="border:0;" allowfullscreen=""
                                         loading="lazy"></iframe>
                                 </div>
 
@@ -74,6 +72,9 @@
                                                                 break;
                                                             case 'tiktok':
                                                                 $icon = 'fab fa-tiktok';
+                                                                break;
+                                                            case 'email':
+                                                                $icon = 'fa fa-envelope';
                                                                 break;
                                                             default:
                                                                 $icon = 'fab fa-globe';

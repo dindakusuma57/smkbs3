@@ -86,3 +86,23 @@
         </div>
     </nav>
 </div>
+
+<script>
+    function toggleDropdown(id) {
+    const openDropdown = document.querySelector('.dropdown-open');
+    if (openDropdown && openDropdown !== document.getElementById(id)) {
+        openDropdown.classList.add('hidden');
+        openDropdown.classList.remove('dropdown-open');
+    }
+
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden');
+
+    if (!dropdown.classList.contains('hidden')) {
+        dropdown.classList.add('dropdown-open');
+    } else {
+        dropdown.classList.remove('dropdown-open');
+    }
+}
+
+</script>
