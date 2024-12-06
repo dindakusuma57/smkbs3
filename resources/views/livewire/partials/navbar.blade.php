@@ -86,21 +86,3 @@
         </div>
     </nav>
 </div>
-
-<script>
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('hidden');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('[data-collapse-toggle="navbar-cta"]');
-        const navbar = document.getElementById('navbar-cta');
-
-        toggleButton.addEventListener('click', () => {
-            // navbar.classList.toggle('flex');   //Menu navbar tengah
-            // navbar.classList.toggle('justify-center');
-            navbar.classList.toggle('hidden');
-        });
-    });
-</script>

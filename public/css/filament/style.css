@@ -13,7 +13,6 @@ body, html {
     transition: background-color 0.3s;
 }
 
-
 .bg-hero {
     background-image: url('/img/latar.png');
     background-size: cover;
@@ -149,6 +148,12 @@ body.modal-open {
     color: white;
 }
 
+.navbar.open {
+    background-color: #16423C; /* Background ketika navbar terbuka */
+}
 
+.navbar.scrolled {
+    background-color: white;
+}
 
 

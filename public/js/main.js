@@ -3,7 +3,6 @@ cssLink.rel = "stylesheet";
 cssLink.href = "css/filament/style.css";
 document.head.appendChild(cssLink);
 
-
 //animation
 AOS.init();
 
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 //NAVBAR
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -100,6 +98,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+//Toggle navbar
+document.addEventListener('DOMContentLoaded', () => {
+    // Toggle dropdown function
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+    }
+
+    // Navbar toggle button functionality
+    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-cta"]');
+    const navbar = document.getElementById('navbar');
+    const navbarMenu = document.getElementById('navbar-cta');
+
+    toggleButton.addEventListener('click', () => {
+        navbarMenu.classList.toggle('hidden');
+        navbar.classList.toggle('open');
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
+
 
 //Kirim pesan
 document.addEventListener("DOMContentLoaded", function () {
@@ -219,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
     selectCategory(defaultCategory);
 });
 
-
 //Calendar
 document.addEventListener('livewire:initialized', function () {
     const calendarEl = document.getElementById('calendar');
@@ -274,8 +299,28 @@ document.addEventListener('livewire:initialized', function () {
     });
 });
 
+//Pagination guru
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('ajax-pagination')) {
+        e.preventDefault();
+        const url = e.target.getAttribute('href');
+        fetchGuruData(url);
+    }
+});
 
+async function fetchGuruData(url) {
+    try {
+        const response = await fetch(url);
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
 
+        document.getElementById('guru-container').innerHTML = doc.querySelector('#guru-container').innerHTML;
+        document.getElementById('pagination-links').innerHTML = doc.querySelector('#pagination-links').innerHTML;
+    } catch (error) {
+        console.error('Gagal memuat data:', error);
+    }
+}
 
 
 
