@@ -10,31 +10,30 @@
 <div>
     {{-- HERO START --}}
     <section class="bg-hero bg-gray-50"
-    style="background-size: cover; background-position: center;">
-    @foreach ($heroes as $hero)
-    <div
-        class="container flex flex-col justify-center p-6 mx-auto py-12 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-        <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
-            data-aos="fade-in">
-            <div>
-                <h1 class=" text-5xl font-bold leading-none sm:text-4xl md:text-5xl text-white">Selamat Datang</h1>
-                <h1 class="mt-4 text-4xl font-bold leading-none sm:text-3xl md:text-4xl text-white">di SMK Bina
-                    Sejahtera 3</h1>
-            </div>
-            <p class="mt-8 mb-8 text-lg sm:mb-12 text-white">
-                {{$hero->deskripsi}}
-            </p>
-            <div
-                class="flex flex-col sm:items-center sm:justify-center sm:flex-row sm:space-x-4 lg:justify-start">
-                <a href="/ppdb"
-                    class="px-8 py-3 text-lg font-semibold rounded-full bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md text-center">Info
-                    PPDB</a>
+        style="background-size: cover; background-position: center;">
+        @foreach ($heroes as $hero)
+        <div
+            class="container flex flex-col justify-center p-6 mx-auto py-12 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
+                data-aos="fade-in">
+                <div>
+                    <h1 class=" text-5xl font-bold leading-none sm:text-4xl md:text-5xl text-white">Selamat Datang</h1>
+                    <h1 class="mt-4 text-4xl font-bold leading-none sm:text-3xl md:text-4xl text-white">di SMK Bina
+                        Sejahtera 3</h1>
+                </div>
+                <p class="mt-8 mb-8 text-lg sm:mb-12 text-white">
+                    {{$hero->deskripsi}}
+                </p>
+                <div
+                    class="flex flex-col sm:items-center sm:justify-center sm:flex-row sm:space-x-4 lg:justify-start">
+                    <a href="/ppdb"
+                        class="px-8 py-3 text-lg font-semibold rounded-full bg-[#C4DAD2] dark:text-black hover:bg-[#16423C] hover:text-white shadow-md text-center">Info
+                        PPDB</a>
+                </div>
             </div>
         </div>
-    </div>
-    @endforeach
-</section>
-
+        @endforeach
+    </section>
     {{-- HERO END --}}
 
     {{-- Alasan START --}}

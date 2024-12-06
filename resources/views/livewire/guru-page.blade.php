@@ -52,7 +52,7 @@
             </div>
 
             <!-- Grid untuk Team -->
-            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-aos="zoom-in">
+            <div id="guru-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-aos="zoom-in">
                 @foreach ($pengajars as $pengajar)
                     <div class="text-center mt-4">
                         <img class="rounded-xl sm:size-48 lg:size-60 mx-auto shadow-md transition-transform transform hover:scale-105 hover:shadow-lg w-full"

@@ -67,6 +67,10 @@ body, html {
     padding: 0.5rem 1rem;
 }
 
+.navbar.scrolled .navbarBrand {
+    color: #16423C !important;
+}
+
 .group-hover\:block {
     display: block !important;
     animation: fadeIn 0.2s;
@@ -122,6 +126,7 @@ body.modal-open {
 #calendar {
     margin-top: 80px;
 }
+
 
 
 

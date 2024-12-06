@@ -148,7 +148,7 @@
                                 <label for="no_telp" class="block font-bold text-[#16423C]">Nomor Telepon</label>
                                 <input type="tel" id="no_telp" name="no_telp" placeholder="Nomor Telepon" required
                                     class="w-full rounded-lg py-2.5 px-4 border border-gray-300 text-sm outline-[#6B9B55]"
-                                    inputmode="numeric" pattern="[0-9]*" oninput="validateInput(event)" />
+                                    inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
                             </div>
 
                             <div>
@@ -176,38 +176,39 @@
             </div>
         </section>
 
-        <!-- Modal content -->
+        <!-- Modal Container -->
         <div id="successModal" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full min-h-screen md:h-auto">
-        <!-- Overlay background -->
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-40"></div> <!-- This will be the overlay -->
+            class="hidden fixed inset-0 z-50 flex items-center justify-center">
+            <!-- Overlay background -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <!-- Modal content -->
-        <div data-aos="fade-up" class="relative p-4 w-full max-w-md h-full md:h-auto z-50">
-            <div class="relative p-4 text-center bg-[#6A9C89] rounded-lg shadow sm:p-5">
-                <button type="button"
-                    class="text-white absolute top-2.5 right-2.5 bg-transparent hover:bg-white hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-white dark:hover:text-white"
-                    data-modal-toggle="successModal">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-                <div class="w-12 h-12 rounded-full bg-white p-2 flex items-center justify-center mx-auto mb-3.5">
-                    <svg aria-hidden="true" class="w-8 h-8 text-[#6A9C89]" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="sr-only">Success</span>
+            <!-- Modal content -->
+            <div class="relative p-4 w-full max-w-md h-auto z-50">
+                <div data-aos="fade-up" class="relative p-4 text-center bg-[#6A9C89] rounded-lg shadow sm:p-5">
+                    <button type="button"
+                        class="text-white absolute top-2.5 right-2.5 bg-transparent hover:bg-white hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="successModal">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                    <div class="w-12 h-12 rounded-full bg-white p-2 flex items-center justify-center mx-auto mb-3.5">
+                        <svg aria-hidden="true" class="w-8 h-8 text-[#6A9C89]" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Success</span>
+                    </div>
+                    <p class="mb-4 text-lg font-semibold text-white">Pesan berhasil di kirim!</p>
                 </div>
-                <p class="mb-4 text-lg font-semibold text-white dark:text-white">Pesan berhasil di kirim!</p>
             </div>
         </div>
     </div>
 
-    </div>
+</div>

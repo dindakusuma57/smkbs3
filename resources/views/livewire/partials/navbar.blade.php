@@ -6,7 +6,7 @@
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-3 py-2">
             <a href="/" class="flex items-center space-x-2">
                 <img src="{{ asset('img/logo.png') }}" class="h-8" alt="Flowbite Logo" />
-                <span id="navbar-brand" class="self-center text-lg font-semibold text-white">SMK Bina Sejahtera 3</span>
+                <span id="navbarBrand" class="navbarBrand self-center text-lg font-semibold text-white">SMK Bina Sejahtera 3</span>
             </a>
 
             <div class="flex items-center md:order-2 space-x-2">
@@ -85,7 +85,6 @@
             </div>
         </div>
     </nav>
-
 </div>
 
 <script>
@@ -93,4 +92,15 @@
         const dropdown = document.getElementById(id);
         dropdown.classList.toggle('hidden');
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.querySelector('[data-collapse-toggle="navbar-cta"]');
+        const navbar = document.getElementById('navbar-cta');
+
+        toggleButton.addEventListener('click', () => {
+            // navbar.classList.toggle('flex');   //Menu navbar tengah
+            // navbar.classList.toggle('justify-center');
+            navbar.classList.toggle('hidden');
+        });
+    });
 </script>

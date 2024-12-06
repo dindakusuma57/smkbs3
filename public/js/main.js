@@ -1,3 +1,9 @@
+const cssLink = document.createElement("link");
+cssLink.rel = "stylesheet";
+cssLink.href = "css/filament/style.css";
+document.head.appendChild(cssLink);
+
+
 //animation
 AOS.init();
 
@@ -62,32 +68,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //NAVBAR
-const navbar = document.getElementById('navbar');
-const navLinks = document.querySelectorAll('.nav-link');
-const ctaButton = document.getElementById('cta-button');
-const navbarBrand = document.getElementById('navbar-brand');
-const kontakLink = document.getElementById('kontak-link');
+document.addEventListener('DOMContentLoaded', () => {
 
-window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    if (window.scrollY > 50) {
-        navbar.classList.add('bg-white', 'shadow-md');
-        navLinks.forEach(link => {
-            if (link !== kontakLink) {
-                link.style.color = '#16423C';
-            }
-        });
-        kontakLink.style.color = 'white';
-        navbarBrand.style.color = '#16423C';
-        ctaButton.style.color = '#16423C';
-    } else {
-        navbar.classList.remove('bg-white', 'shadow-md');
-        navLinks.forEach(link => link.style.color = 'white');
-        navbarBrand.style.color = 'white';
-        ctaButton.style.color = 'white';
-    }
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const ctaButton = document.getElementById('cta-button');
+    const navbarBrand = document.getElementById('navbarBrand');
+    const kontakLink = document.getElementById('kontak-link');
+
+    window.addEventListener('scroll', function ()  {
+        const navbar = document.querySelector(".navbar");
+        console.log(window.scrollY);
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+            navbar.classList.add('bg-white', 'shadow-md');
+            navLinks.forEach(link => {
+                if (link !== kontakLink) {
+                    link.style.color = '#16423C';
+                }
+            });
+            kontakLink.style.color = 'white';
+            navbarBrand.style.color = '#16423C';
+            ctaButton.style.color = '#16423C';
+
+        } else {
+            navbar.classList.remove("scrolled");
+            navbar.classList.remove('bg-white', 'shadow-md');
+            navLinks.forEach(link => link.style.color = 'white');
+            navbarBrand.style.color = 'white';
+            ctaButton.style.color = 'white';
+        }
+    });
 });
-
 
 //Kirim pesan
 document.addEventListener("DOMContentLoaded", function () {
@@ -152,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
     numericInputs.forEach(input => input.addEventListener("input", validateInput));
 });
 
-
 //scrool to top
 const toTop = document.querySelector(".to-top");
 
@@ -163,7 +174,6 @@ window.addEventListener("scroll", () => {
         toTop.classList.remove("active");
     }
 })
-
 
 //category berita
 document.addEventListener('DOMContentLoaded', function () {

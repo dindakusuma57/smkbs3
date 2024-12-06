@@ -21,7 +21,7 @@ class DetailBeritaPage extends Component
 
     public function render()
     {
-        $recentBeritas = Berita::latest()->take(5)->get();
+        $recentBeritas = Berita::latest()->take(6)->get();
 
     return view('livewire.detail-berita-page', [
         'berita' => $this->berita,

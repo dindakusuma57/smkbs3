@@ -24,7 +24,7 @@
     </section>
 
     {{-- Berita utama --}}
-    <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <section class="py-10 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
             <div class="col-span-1 sm:col-span-2 space-y-8">
@@ -59,7 +59,7 @@
                             <div class="border-l h-4"></div>
                             <div>{{ \Carbon\Carbon::parse($berita->created_at)->format('d F Y') }}</div>
                         </div>
-                        <p class="text-[#002500] text-base">{{ $berita->deskripsi }}</p>
+                        <p class="text-[#002500] text-justify text-base">{{ $berita->deskripsi }}</p>
                     </div>
                 </div>
 
@@ -70,17 +70,9 @@
 
             {{-- Berita terbaru --}}
             <div data-aos="fade-up" class="space-y-6 px-8">
-                <div class="bg-white p-6 shadow-md rounded-lg px-8">
-                    <h3 class="text-lg font-semibold text-[#16423C]">Cari Berita</h3>
-                    {{-- <form action="{{ route('berita.search') }}" method="GET" class="mt-4">
-                        <input type="text" name="q" class="w-full p-2 border rounded-md" placeholder="Cari berita..." value="{{ request()->input('q') }}" />
-                        <button type="submit" class="w-full mt-2 bg-[#16423C] text-white p-2 rounded-md">Cari</button>
-                    </form> --}}
-                </div>
-
                 {{-- berita --}}
                 <div class="space-y-4">
-                    <h3 class="text-lg font-semibold text-[#16423C]">Berita Terbaru</h3>
+                    <h3 class="text-lg font-semibold text-[#16423C] leading-7 inline border-b-4 border-[#6A9C89] pb-2 max-w-max">Berita Terbaru</h3>
                     <div class="grid gap-4">
                         @foreach ($recentBeritas as $recent)
                             <a href="{{ route('berita.show', $recent->slug) }}"
