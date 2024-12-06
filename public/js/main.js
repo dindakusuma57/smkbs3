@@ -179,23 +179,18 @@ window.addEventListener("scroll", () => {
 document.addEventListener('DOMContentLoaded', function () {
     const categoryButtons = document.querySelectorAll('.category-button');
     const beritaItems = document.querySelectorAll('.berita-item');
-    const allCategoryButton = document.querySelector('[onclick="selectCategory(\'all\')"]');
-
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('hidden');
-    }
+    const allCategoryButton = document.getElementById('allCategoryButton');
 
     function selectCategory(categoryId) {
-        categoryButtons.forEach(button => {
-            if (button.getAttribute('data-category-id') == categoryId) {
-                button.classList.add('bg-[#16423C]', 'text-white');
-                button.classList.remove('bg-[#7d7e7e]');
-            } else {
-                button.classList.remove('bg-[#16423C]', 'text-white');
-                button.classList.add('bg-[#7d7e7e]');
-            }
-        });
+        categoryButtons.forEach(button => button.classList.remove('active'));
+        if (allCategoryButton) allCategoryButton.classList.remove('active');
+
+        if (categoryId === 'all') {
+            if (allCategoryButton) allCategoryButton.classList.add('active');
+        } else {
+            const activeButton = document.querySelector(`.category-button[data-category-id="${categoryId}"]`);
+            if (activeButton) activeButton.classList.add('active');
+        }
 
         beritaItems.forEach(item => {
             const itemCategoryId = item.getAttribute('data-category-id');
@@ -205,18 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.style.display = 'none';
             }
         });
-
-        if (categoryId === 'all') {
-            allCategoryButton.classList.add('bg-[#16423C]', 'text-white');
-        } else {
-            allCategoryButton.classList.remove('text-white');
-            allCategoryButton.classList.add('bg-[#7d7e7e]');
-        }
-    }
-
-    if (allCategoryButton) {
-        allCategoryButton.classList.add('bg-[#C4DAD2]');
-        selectCategory('all');
     }
 
     categoryButtons.forEach(button => {
@@ -231,7 +214,11 @@ document.addEventListener('DOMContentLoaded', function () {
             selectCategory('all');
         });
     }
+
+    const defaultCategory = 'all';
+    selectCategory(defaultCategory);
 });
+
 
 //Calendar
 document.addEventListener('livewire:initialized', function () {

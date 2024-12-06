@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body, html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -125,6 +124,29 @@ body.modal-open {
 
 #calendar {
     margin-top: 80px;
+}
+
+.category-button:hover {
+    background-color: #16423C;
+    color: white;
+}
+
+.category-button.active {
+    background-color: #16423C;
+    color: white;
+}
+.category-button, #allCategoryButton {
+    background-color: #C4DAD2;
+    color: #002500;
+    transition: all 0.3s ease-in-out;
+}
+.category-button:hover, #allCategoryButton:hover {
+    background-color: #16423C;
+    color: white;
+}
+.category-button.active, #allCategoryButton.active {
+    background-color: #16423C;
+    color: white;
 }
 
 
